@@ -1,0 +1,15 @@
+<macrodef name="addDepartment" description="Add new department">
+	<attribute name="name"/>
+
+	<sequential>
+		<verifyText description="Verifying if this is 'Welcome' page" text="Welcome"/>
+
+		<clickLink label="Add Department"/>
+		<verifyText text="New Department:"/>
+
+		<setInputField name="name" value="@{name}"/>
+		<clickButton label="Add Department"/>
+		<verifyText text="Department Information:"/>
+		<verifyText text="@{name}"/>
+	</sequential>
+</macrodef>

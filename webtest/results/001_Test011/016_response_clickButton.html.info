@@ -1,0 +1,6 @@
+url=http://localhost:8080/kp_spring01/departments/2
+cookies=1
+cookie.0.name=JSESSIONID
+cookie.0.domain=localhost
+cookie.0.value=F5BCA5FC26C95F2B571A2294EFB9C634
+cookie.0.path=/kp_spring01

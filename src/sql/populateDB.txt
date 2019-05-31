@@ -1,0 +1,17 @@
+INSERT INTO departments VALUES (1, 'D-e-p-t-1');
+INSERT INTO departments VALUES (2, 'D-e-p-t-2');
+INSERT INTO departments VALUES (3, 'D-e-p-t-3');
+
+INSERT INTO titles VALUES (1, 'Manager');
+INSERT INTO titles VALUES (2, 'Analyst');
+INSERT INTO titles VALUES (3, 'Developer');
+
+INSERT INTO employees VALUES (1, 'F-N-a-m-e-11', 'L-N-a-m-e-11', 1, 1);
+INSERT INTO employees VALUES (2, 'F-N-a-m-e-12', 'L-N-a-m-e-12', 1, 2);
+INSERT INTO employees VALUES (3, 'F-N-a-m-e-13', 'L-N-a-m-e-13', 1, 3);
+INSERT INTO employees VALUES (4, 'F-N-a-m-e-21', 'L-N-a-m-e-21', 2, 1);
+INSERT INTO employees VALUES (5, 'F-N-a-m-e-22', 'L-N-a-m-e-22', 2, 2);
+INSERT INTO employees VALUES (6, 'F-N-a-m-e-23', 'L-N-a-m-e-23', 2, 3);
+INSERT INTO employees VALUES (7, 'F-N-a-m-e-31', 'L-N-a-m-e-31', 3, 1);
+INSERT INTO employees VALUES (8, 'F-N-a-m-e-32', 'L-N-a-m-e-32', 3, 2);
+INSERT INTO employees VALUES (9, 'F-N-a-m-e-33', 'L-N-a-m-e-33', 3, 3);

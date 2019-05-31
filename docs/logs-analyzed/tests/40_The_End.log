@@ -1,0 +1,3 @@
+org.springframework.context.support.GenericApplicationContext Closing org.springframework.context.support.GenericApplicationContext@18a49e0: startup date [10:51:36]; root of context hierarchy
+org.springframework.context.support.GenericApplicationContext Closing org.springframework.context.support.GenericApplicationContext@46a55e: startup date [10:51:37]; root of context hierarchy
+org.springframework.orm.hibernate3.LocalSessionFactoryBean Closing Hibernate SessionFactory

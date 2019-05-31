@@ -1,0 +1,224 @@
+===============================================================================
+
+BaseEntity
+  |
+  |--- Person
+  |      \--- Employee
+  |
+  \--- NamedEntity
+         |--- Department
+         \--- Title
+
+
+-----------------------------------------
+ Department             | Employee      |
+ one-to-many            | many-to-one	|
+ mapped-by="department" |               |
+ INVERSE SIDE           | OWNING SIDE   |
+-----------------------------------------
+A bidirectional relationship has both an owning side and an inverse side.
+
+-----------------------------------------
+ Employee               | Title         |
+ many-to-one            |               |
+ OWNING SIDE            |               |
+-----------------------------------------
+A unidirectional relationship has only an owning side.
+
+===============================================================================
+=== Persistence Providers ===
+
+1. Oracle TopLink and EclipseLink
+   TopLink Essentials is the reference implementation of the EJB 3.0 JPA.
+   EclipseLink is based on the TopLink product.
+   EclipseLink is the reference implementation for JPA 2.0.
+
+2. JBoss Hibernate
+   The Hibernate Java Persistence provider is the default persistence provider
+   of the JBoss EJB 3.0 implementation and bundled with the JBoss Application Server.
+   Hibernate is the default persistence provider in Seam Framework.
+
+3. Apache OpenJPA
+   Two persistence providers are included in WebSphere Application Server:
+    - JPA for WebSphere Application Server persistence provider (built from the Apache OpenJPA)
+    - Apache OpenJPA persistence provider
+   BEA has donated a large part of Kodo's persistence kernel and JPA bindings as the OpenJPA project. 
+
+JPA adapters used in web application (WEB-INF/applicationContext-jpa.xml):
+1. org.springframework.orm.jpa.vendor.TopLinkJpaVendorAdapter
+
+JPA adapters used in tests:
+1. org.springframework.orm.jpa.vendor.TopLinkJpaVendorAdapter
+2. org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter
+3. org.springframework.orm.jpa.vendor.OpenJpaVendorAdapter
+
+===============================================================================
+container context
+resource context
+environment context
+
+===============================================================================
+===  Entity Class <=> Abstract Schema ===
+
+ Entity Class
+   |
+   |-- 1.1. persistent field
+   |-- 1.2. get accessor method (for a persistent property)
+   |
+   |-- 2.1. persistent relationship field
+   \-- 2.2. get accessor method (for a persistent relationship property)
+
+ Abstract Schema
+   |
+   |-- 1. state-field
+   |
+   \-- 2. association-field
+===============================================================================
+An interceptor is a method that intercepts:
+ 1. a business method invocation
+ 2. a lifecycle callback event
+
+=== Business Method Interceptor Methods ===
+	• @AroundInvoke
+
+=== Lifecycle Callback Interceptor Methods ===
+
+Stateless Session Bean -> @javax.ejb.Stateless
+	• @PostConstruct
+	• @PreDestroy
+- - - - - - - - - - - - -
+Stateful Session Bean -> @javax.ejb.Stateful
+	• @PostConstruct
+	• @PreDestroy
+	• @PostActivate
+	• @PrePassivate
+- - - - - - - - - - - - -
+Message-Driven Bean -> @javax.ejb.MessageDriven
+	• @PostConstruct
+	• @PreDestroy
+- - - - - - - - - - - - -
+Entity -> @javax.persistence.Entity
+	• @PrePersist
+	• @PostPersist
+	• @PreUpdate
+	• @PostUpdate
+	• @PostLoad
+	• @PreRemove
+	• @PostRemove
+- - - - - - - - - - - - -
+
+===============================================================================
+=== Annotations ===
+javax.annotation (e.g. @Resource)
+javax.ejb  (e.g. @EJB)
+javax.persistence (e.g. @PersistenceContext)
+javax.interceptor (e.g. @AroundInvoke)
+javax.jws (e.g. @WebService)
+javax.xml.bind.annotation (e.g. @XmlRootElement)
+javax.xml.ws (e.g. @WebServiceRef)
+org.junit (e.g. @Test)
+
+org.springframework.beans.factory.annotation (e.g. @Autowired)
+org.springframework.jmx.export.annotation (e.g. @ManagedResource)
+org.springframework.stereotype (e.g. @Repository)
+org.springframework.transaction.annotation (e.g. @Transactional)
+org.springframework.web.bind.annotation (e.g. @RequestMapping)
+org.springframework.test.context (e.g. @ContextConfiguration)
+
+
+=== Annotations for Entity Relationships (package javax.persistence) ===
+@OneToOne, @OneToMany, @ManyToOne, @ManyToMany 
+
+
+Implicitly registered post-processors with "<context:annotation-config/>":
+ - AutowiredAnnotationBeanPostProcessor
+ - CommonAnnotationBeanPostProcessor
+ - PersistenceAnnotationBeanPostProcessor
+ - RequiredAnnotationBeanPostProcessor
+
+===============================================================================
+=== HTTP Message Conversion ===
+Concrete implementations of the HttpMessageConverter interface for the main media (mime)
+types are provided in the framework and are registered by default
+with the RestTemplate on the client-side and
+with AnnotationMethodHandlerAdapter on the server-side.
+
+The implementations of HttpMessageConverter:
+ - StringHttpMessageConverter
+ - FormHttpMessageConverter
+ - ByteArrayMessageConverter
+ - MarshallingHttpMessageConverter
+ - SourceHttpMessageConverter
+
+===============================================================================
+JTA Transaction Management. XA Transaction Processing.
+The X/Open XA Interface should only be used if you are coordinating multiple resources
+(i.e. databases and message queues or topics) within the same transaction context.
+The two-phase commit protocol is the mechanism used by XA to coordinate multiple
+resources during a global transaction.
+
+===============================================================================
+Session bean local client:
+	The arguments and results of the methods of the local  business interface are passed “by reference”.
+
+Session bean remote client:
+	The arguments and results of the methods of the remote business interface are passed “by value”.
+	Objects must be serialized.
+
+===============================================================================
+JAX-RPC 1.1 is the standard web service API in J2EE 1.4.
+It has been superseded by JAX-WS 2.0 in Java EE 5.
+
+===============================================================================
+The JNDI ENC is a default JNDI context whose root is distinguished by the 'java:comp/env' directory.
+
+===============================================================================
+Advice is code that executes at each join point picked out by a pointcut. 
+
+Transactions are a cross-cutting concern already implemented by the EJB container.
+
+===============================================================================
+Java EE prohibits the creation of new Threads/ThreadPools by managed components
+
+Spring allows to delegate the execution of asynchronous tasks
+to a TaskExecutor instance (Spring provided abstraction)
+
+===============================================================================
+=== external setup steps for this Spring example on Tomcat ===
+1. To use JPA class instrumentation it was copied
+   file org.springframework.instrument.tomcat-3.0.5.RELEASE.jar to %TOMCAT_HOME%\lib\
+
+2. Jar files in "lib" directory are from:
+	c:\tools\aspectj-1.6.5\lib\aspectjrt.jar
+	c:\tools\aspectj-1.6.5\lib\aspectjweaver.jar
+	c:\tools\hibernate\hibernate-distribution-3.3.2.GA\hibernate3.jar
+	c:\tools\spring-framework-2.5.6.SEC01\lib\j2ee\persistence.jar
+	c:\tools\spring-framework-2.5.6.SEC01\lib\j2ee\servlet-api.jar
+	c:\tools\spring-framework-2.5.6.SEC01\lib\jakarta-commons\commons-dbcp.jar
+	c:\tools\spring-framework-2.5.6.SEC01\lib\jakarta-commons\commons-logging.jar 
+	c:\tools\spring-framework-2.5.6.SEC01\lib\toplink\toplink-essentials.jar
+	c:\tools\spring-framework-2.5.6.SEC01\lib\toplink\toplink-api.jar
+	c:\tools\spring-framework-3.0.0.M4\dist\org.springframework.*-3.0.0.M4.jar
+	c:\tools\spring-framework-2.5.6.SEC01\lib\junit\junit-4.4.jar (NOT c:\tools\junit4.7\junit-4.7.jar !!!)
+	c:\tools\jdom-1.1.1\build\jdom.jar
+	c:\tools\spring-framework-2.5.6.SEC01\lib\j2ee\jstl.jar
+	c:\tools\spring-framework-2.5.6.SEC01\lib\jakarta-taglibs\standard.jar
+	c:\tools\spring-framework-2.5.6.SEC01\lib\cglib\cglib-nodep-2.1_3.jar
+	c:\tools\spring-framework-2.5.6.SEC01\lib\dom4j\dom4j-1.6.1.jar
+	c:\tools\spring-framework-2.5.6.SEC01\lib\ehcache\ehcache-1.5.0.jar
+	c:\tools\spring-framework-2.5.6.SEC01\lib\hibernate\hibernate-annotations.jar
+	c:\tools\spring-framework-2.5.6.SEC01\lib\hibernate\hibernate-entitymanager.jar
+	c:\tools\spring-framework-2.5.6.SEC01\lib\hibernate\hibernate-commons-annotations.jar
+	c:\tools\spring-framework-2.5.6.SEC01\lib\j2ee\connector.jar
+	c:\tools\spring-framework-2.5.6.SEC01\lib\j2ee\jta.jar
+	c:\tools\spring-framework-2.5.6.SEC01\lib\jakarta-commons\commons-collections.jar
+	c:\tools\spring-framework-2.5.6.SEC01\lib\jakarta-commons\commons-lang.jar
+	c:\tools\spring-framework-2.5.6.SEC01\lib\jakarta-commons\commons-pool.jar
+	c:\tools\spring-framework-2.5.6.SEC01\lib\javassist\javassist-3.4.GA.jar
+	c:\tools\spring-framework-2.5.6.SEC01\lib\log4j\log4j-1.2.15.jar
+	c:\tools\spring-framework-2.5.6.SEC01\lib\openjpa\openjpa-1.1.0.jar
+	c:\tools\spring-framework-2.5.6.SEC01\lib\serp\serp-1.13.1.jar
+	c:\tools\spring-framework-2.5.6.SEC01\lib\slf4j\slf4j*.jar
+	c:\tools\spring-framework-3.0.0.M4\dist\org.springframework.test-3.0.0.M4.jar
+
+===============================================================================

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd"
+	version="1.0">
+
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete />
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+
+	<package>kp.company</package>
+
+	<mapped-superclass class="BaseEntity">
+		<attributes>
+			<id name="id">
+				<generated-value strategy="IDENTITY" />
+			</id>
+			<transient name="new" />
+		</attributes>
+	</mapped-superclass>
+
+	<mapped-superclass class="NamedEntity">
+		<attributes>
+			<basic name="name">
+				<column name="NAME" />
+			</basic>
+		</attributes>
+	</mapped-superclass>
+
+	<mapped-superclass class="Person">
+		<attributes>
+			<basic name="firstName">
+				<column name="FIRST_NAME" />
+			</basic>
+			<basic name="lastName">
+				<column name="LAST_NAME" />
+			</basic>
+		</attributes>
+	</mapped-superclass>
+
+	<entity class="Department">
+		<table name="DEPARTMENTS" />
+		<attributes>
+			<one-to-many name="employeesInternal" target-entity="Employee"
+				mapped-by="department" fetch="EAGER">
+				<cascade>
+					<cascade-all />
+				</cascade>
+			</one-to-many>
+			<transient name="employees" />
+		</attributes>
+	</entity>
+
+	<entity class="Title">
+		<table name="TITLES"/>
+	</entity>
+
+	<entity class="Employee">
+		<table name="EMPLOYEES" />
+		<attributes>
+			<many-to-one name="department" fetch="EAGER">
+				<cascade>
+					<cascade-persist/>
+					<cascade-merge/>
+					<cascade-refresh/>
+				</cascade>
+			</many-to-one>
+			<many-to-one name="title" fetch="EAGER">
+			</many-to-one>
+		</attributes>
+	</entity>
+
+</entity-mappings>

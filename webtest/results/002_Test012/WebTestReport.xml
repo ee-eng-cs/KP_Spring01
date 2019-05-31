@@ -1,0 +1,2076 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<summary Implementation-Title="Canoo Webtest" Implementation-Version="development">
+    <testresult endtime="Tue Dec 12 19:05:00 CET 2017"
+        location="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml:35: "
+        starttime="Tue Dec 12 19:04:58 CET 2017" successful="yes" testspecname="test01-2">
+        <description><![CDATA[Loop testing 'Add' and 'Delete']]></description>
+        <config>
+            <parameter name="autorefresh" value="false"/>
+            <parameter name="basepath" value="kp_spring01"/>
+            <parameter name="resultfile" value="WebTestReport.xml"/>
+            <parameter name="timeout" value="300"/>
+            <parameter name="showhtmlparseroutput" value="no"/>
+            <parameter name="saveprefix" value="response"/>
+            <parameter name="protocol" value="http"/>
+            <parameter name="resultpath" value="c:\0_workspace\KP_Spring01\webtest\results"/>
+            <parameter name="port" value="8080"/>
+            <parameter name="browser" value="Microsoft Internet Explorer6.0"/>
+            <parameter name="host" value="localhost"/>
+            <parameter name="saveresponse" value="yes"/>
+            <parameter name="haltonerror" value="no"/>
+            <parameter name="haltonfailure" value="no"/>
+        </config>
+        <results>
+            <step _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml" _line="39"
+                description="going to 'Welcome' page" duration="47" result="completed" taskName="group">
+                <step _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml" _line="40"
+                    duration="47" result="completed" taskName="startApplication">
+                    <step
+                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\startApplication.xml"
+                        _line="3" description="getting Welcome page" duration="31"
+                        result="completed" taskName="invoke">
+                        <parameter name="-> complete url" value="http://localhost:8080/kp_spring01"/>
+                        <parameter name="url" value="/"/>
+                        <resultFile name="001_response_invoke.html"/>
+                    </step>
+                    <step
+                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\startApplication.xml"
+                        _line="4" description="" duration="0" result="completed" taskName="verifyText">
+                        <parameter name="text" value="Welcome"/>
+                    </step>
+                </step>
+            </step>
+            <step _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml" _line="43"
+                description="adding department with employees" duration="1054" result="completed" taskName="group">
+                <step _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml" _line="44"
+                    duration="1054" result="completed" taskName="repeat">
+                    <parameter name="count" value="3"/>
+                    <parameter name="countername" value="dep"/>
+                    <parameter name="startCount" value="7"/>
+                    <step _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml" _line="44"
+                        description="Iteration 7" duration="369" result="completed" taskName="iteration wrapper">
+                        <step _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                            _line="45" duration="122" result="completed" taskName="addDepartment">
+                            <parameter name="name" value="D-e-p-t-7"/>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addDepartment.xml"
+                                _line="5" description="Verifying if this is 'Welcome' page"
+                                duration="1" result="completed" taskName="verifyText">
+                                <parameter name="text" value="Welcome"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addDepartment.xml"
+                                _line="7" duration="21" result="completed" taskName="clickLink">
+                                <parameter name="label" value="Add Department"/>
+                                <resultFile name="002_response_clickLink.html"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addDepartment.xml"
+                                _line="8" duration="0" result="completed" taskName="verifyText">
+                                <parameter name="text" value="New Department:"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addDepartment.xml"
+                                _line="10" duration="16" result="completed" taskName="setInputField">
+                                <parameter name="name" value="name"/>
+                                <parameter name="value" value="D-e-p-t-7"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addDepartment.xml"
+                                _line="11" duration="47" result="completed" taskName="clickButton">
+                                <parameter name="label" value="Add Department"/>
+                                <resultFile name="003_response_clickButton.html"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addDepartment.xml"
+                                _line="12" duration="0" result="completed" taskName="verifyText">
+                                <parameter name="text" value="Department Information:"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addDepartment.xml"
+                                _line="13" duration="0" result="completed" taskName="verifyText">
+                                <parameter name="text" value="D-e-p-t-7"/>
+                            </step>
+                        </step>
+                        <step _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                            _line="46" duration="232" result="completed" taskName="repeat">
+                            <parameter name="count" value="3"/>
+                            <parameter name="countername" value="emp"/>
+                            <parameter name="startCount" value="1"/>
+                            <step _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                                _line="46" description="Iteration 1" duration="63"
+                                result="completed" taskName="iteration wrapper">
+                                <step
+                                    _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                                    _line="48" duration="63" result="completed" taskName="addEmployee">
+                                    <parameter name="firstName" value="F-N-a-m-e-71"/>
+                                    <parameter name="lastName" value="L-N-a-m-e-71"/>
+                                    <parameter name="name" value="D-e-p-t-7"/>
+                                    <parameter name="title" value="Manager"/>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="8"
+                                        description="Verifying if this is 'Department Information' page"
+                                        duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Department Information:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="9" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="D-e-p-t-7"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="11" duration="16" result="completed" taskName="clickLink">
+                                        <parameter name="label" value="Add Employee"/>
+                                        <resultFile name="004_response_clickLink.html"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="12" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="New Employee:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="14" duration="0" result="completed" taskName="setInputField">
+                                        <parameter name="name" value="firstName"/>
+                                        <parameter name="value" value="F-N-a-m-e-71"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="15" duration="0" result="completed" taskName="setInputField">
+                                        <parameter name="name" value="lastName"/>
+                                        <parameter name="value" value="L-N-a-m-e-71"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="16" duration="0" result="completed" taskName="setSelectField">
+                                        <parameter name="name" value="title"/>
+                                        <parameter name="text" value="Manager"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="17" duration="32" result="completed" taskName="clickButton">
+                                        <parameter name="label" value="Add Employee"/>
+                                        <resultFile name="005_response_clickButton.html"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="18" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Department Information:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="19" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="F-N-a-m-e-71"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="20" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="L-N-a-m-e-71"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="21" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Manager"/>
+                                    </step>
+                                </step>
+                            </step>
+                            <step _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                                _line="46" description="Iteration 2" duration="115"
+                                result="completed" taskName="iteration wrapper">
+                                <step
+                                    _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                                    _line="48" duration="115" result="completed" taskName="addEmployee">
+                                    <parameter name="firstName" value="F-N-a-m-e-72"/>
+                                    <parameter name="lastName" value="L-N-a-m-e-72"/>
+                                    <parameter name="name" value="D-e-p-t-7"/>
+                                    <parameter name="title" value="Manager"/>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="8"
+                                        description="Verifying if this is 'Department Information' page"
+                                        duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Department Information:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="9" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="D-e-p-t-7"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="11" duration="22" result="completed" taskName="clickLink">
+                                        <parameter name="label" value="Add Employee"/>
+                                        <resultFile name="006_response_clickLink.html"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="12" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="New Employee:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="14" duration="0" result="completed" taskName="setInputField">
+                                        <parameter name="name" value="firstName"/>
+                                        <parameter name="value" value="F-N-a-m-e-72"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="15" duration="16" result="completed" taskName="setInputField">
+                                        <parameter name="name" value="lastName"/>
+                                        <parameter name="value" value="L-N-a-m-e-72"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="16" duration="0" result="completed" taskName="setSelectField">
+                                        <parameter name="name" value="title"/>
+                                        <parameter name="text" value="Manager"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="17" duration="47" result="completed" taskName="clickButton">
+                                        <parameter name="label" value="Add Employee"/>
+                                        <resultFile name="007_response_clickButton.html"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="18" duration="15" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Department Information:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="19" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="F-N-a-m-e-72"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="20" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="L-N-a-m-e-72"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="21" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Manager"/>
+                                    </step>
+                                </step>
+                            </step>
+                            <step _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                                _line="46" description="Iteration 3" duration="54"
+                                result="completed" taskName="iteration wrapper">
+                                <step
+                                    _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                                    _line="48" duration="54" result="completed" taskName="addEmployee">
+                                    <parameter name="firstName" value="F-N-a-m-e-73"/>
+                                    <parameter name="lastName" value="L-N-a-m-e-73"/>
+                                    <parameter name="name" value="D-e-p-t-7"/>
+                                    <parameter name="title" value="Manager"/>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="8"
+                                        description="Verifying if this is 'Department Information' page"
+                                        duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Department Information:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="9" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="D-e-p-t-7"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="11" duration="22" result="completed" taskName="clickLink">
+                                        <parameter name="label" value="Add Employee"/>
+                                        <resultFile name="008_response_clickLink.html"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="12" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="New Employee:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="14" duration="0" result="completed" taskName="setInputField">
+                                        <parameter name="name" value="firstName"/>
+                                        <parameter name="value" value="F-N-a-m-e-73"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="15" duration="0" result="completed" taskName="setInputField">
+                                        <parameter name="name" value="lastName"/>
+                                        <parameter name="value" value="L-N-a-m-e-73"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="16" duration="0" result="completed" taskName="setSelectField">
+                                        <parameter name="name" value="title"/>
+                                        <parameter name="text" value="Manager"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="17" duration="32" result="completed" taskName="clickButton">
+                                        <parameter name="label" value="Add Employee"/>
+                                        <resultFile name="009_response_clickButton.html"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="18" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Department Information:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="19" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="F-N-a-m-e-73"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="20" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="L-N-a-m-e-73"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="21" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Manager"/>
+                                    </step>
+                                </step>
+                            </step>
+                        </step>
+                        <step _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                            _line="50" description="" duration="15" result="completed" taskName="clickLink">
+                            <parameter name="label" value="Home"/>
+                            <resultFile name="010_response_clickLink.html"/>
+                        </step>
+                    </step>
+                    <step _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml" _line="44"
+                        description="Iteration 8" duration="316" result="completed" taskName="iteration wrapper">
+                        <step _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                            _line="45" duration="54" result="completed" taskName="addDepartment">
+                            <parameter name="name" value="D-e-p-t-8"/>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addDepartment.xml"
+                                _line="5" description="Verifying if this is 'Welcome' page"
+                                duration="0" result="completed" taskName="verifyText">
+                                <parameter name="text" value="Welcome"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addDepartment.xml"
+                                _line="7" duration="16" result="completed" taskName="clickLink">
+                                <parameter name="label" value="Add Department"/>
+                                <resultFile name="011_response_clickLink.html"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addDepartment.xml"
+                                _line="8" duration="0" result="completed" taskName="verifyText">
+                                <parameter name="text" value="New Department:"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addDepartment.xml"
+                                _line="10" duration="0" result="completed" taskName="setInputField">
+                                <parameter name="name" value="name"/>
+                                <parameter name="value" value="D-e-p-t-8"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addDepartment.xml"
+                                _line="11" duration="38" result="completed" taskName="clickButton">
+                                <parameter name="label" value="Add Department"/>
+                                <resultFile name="012_response_clickButton.html"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addDepartment.xml"
+                                _line="12" duration="0" result="completed" taskName="verifyText">
+                                <parameter name="text" value="Department Information:"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addDepartment.xml"
+                                _line="13" duration="0" result="completed" taskName="verifyText">
+                                <parameter name="text" value="D-e-p-t-8"/>
+                            </step>
+                        </step>
+                        <step _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                            _line="46" duration="246" result="completed" taskName="repeat">
+                            <parameter name="count" value="3"/>
+                            <parameter name="countername" value="emp"/>
+                            <parameter name="startCount" value="1"/>
+                            <step _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                                _line="46" description="Iteration 1" duration="62"
+                                result="completed" taskName="iteration wrapper">
+                                <step
+                                    _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                                    _line="48" duration="62" result="completed" taskName="addEmployee">
+                                    <parameter name="firstName" value="F-N-a-m-e-81"/>
+                                    <parameter name="lastName" value="L-N-a-m-e-81"/>
+                                    <parameter name="name" value="D-e-p-t-8"/>
+                                    <parameter name="title" value="Manager"/>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="8"
+                                        description="Verifying if this is 'Department Information' page"
+                                        duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Department Information:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="9" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="D-e-p-t-8"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="11" duration="15" result="completed" taskName="clickLink">
+                                        <parameter name="label" value="Add Employee"/>
+                                        <resultFile name="013_response_clickLink.html"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="12" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="New Employee:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="14" duration="0" result="completed" taskName="setInputField">
+                                        <parameter name="name" value="firstName"/>
+                                        <parameter name="value" value="F-N-a-m-e-81"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="15" duration="0" result="completed" taskName="setInputField">
+                                        <parameter name="name" value="lastName"/>
+                                        <parameter name="value" value="L-N-a-m-e-81"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="16" duration="0" result="completed" taskName="setSelectField">
+                                        <parameter name="name" value="title"/>
+                                        <parameter name="text" value="Manager"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="17" duration="31" result="completed" taskName="clickButton">
+                                        <parameter name="label" value="Add Employee"/>
+                                        <resultFile name="014_response_clickButton.html"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="18" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Department Information:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="19" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="F-N-a-m-e-81"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="20" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="L-N-a-m-e-81"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="21" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Manager"/>
+                                    </step>
+                                </step>
+                            </step>
+                            <step _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                                _line="46" description="Iteration 2" duration="84"
+                                result="completed" taskName="iteration wrapper">
+                                <step
+                                    _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                                    _line="48" duration="84" result="completed" taskName="addEmployee">
+                                    <parameter name="firstName" value="F-N-a-m-e-82"/>
+                                    <parameter name="lastName" value="L-N-a-m-e-82"/>
+                                    <parameter name="name" value="D-e-p-t-8"/>
+                                    <parameter name="title" value="Manager"/>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="8"
+                                        description="Verifying if this is 'Department Information' page"
+                                        duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Department Information:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="9" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="D-e-p-t-8"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="11" duration="16" result="completed" taskName="clickLink">
+                                        <parameter name="label" value="Add Employee"/>
+                                        <resultFile name="015_response_clickLink.html"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="12" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="New Employee:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="14" duration="0" result="completed" taskName="setInputField">
+                                        <parameter name="name" value="firstName"/>
+                                        <parameter name="value" value="F-N-a-m-e-82"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="15" duration="0" result="completed" taskName="setInputField">
+                                        <parameter name="name" value="lastName"/>
+                                        <parameter name="value" value="L-N-a-m-e-82"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="16" duration="18" result="completed" taskName="setSelectField">
+                                        <parameter name="name" value="title"/>
+                                        <parameter name="text" value="Manager"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="17" duration="50" result="completed" taskName="clickButton">
+                                        <parameter name="label" value="Add Employee"/>
+                                        <resultFile name="016_response_clickButton.html"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="18" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Department Information:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="19" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="F-N-a-m-e-82"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="20" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="L-N-a-m-e-82"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="21" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Manager"/>
+                                    </step>
+                                </step>
+                            </step>
+                            <step _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                                _line="46" description="Iteration 3" duration="100"
+                                result="completed" taskName="iteration wrapper">
+                                <step
+                                    _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                                    _line="48" duration="100" result="completed" taskName="addEmployee">
+                                    <parameter name="firstName" value="F-N-a-m-e-83"/>
+                                    <parameter name="lastName" value="L-N-a-m-e-83"/>
+                                    <parameter name="name" value="D-e-p-t-8"/>
+                                    <parameter name="title" value="Manager"/>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="8"
+                                        description="Verifying if this is 'Department Information' page"
+                                        duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Department Information:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="9" duration="16" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="D-e-p-t-8"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="11" duration="15" result="completed" taskName="clickLink">
+                                        <parameter name="label" value="Add Employee"/>
+                                        <resultFile name="017_response_clickLink.html"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="12" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="New Employee:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="14" duration="19" result="completed" taskName="setInputField">
+                                        <parameter name="name" value="firstName"/>
+                                        <parameter name="value" value="F-N-a-m-e-83"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="15" duration="1" result="completed" taskName="setInputField">
+                                        <parameter name="name" value="lastName"/>
+                                        <parameter name="value" value="L-N-a-m-e-83"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="16" duration="2" result="completed" taskName="setSelectField">
+                                        <parameter name="name" value="title"/>
+                                        <parameter name="text" value="Manager"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="17" duration="32" result="completed" taskName="clickButton">
+                                        <parameter name="label" value="Add Employee"/>
+                                        <resultFile name="018_response_clickButton.html"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="18" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Department Information:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="19" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="F-N-a-m-e-83"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="20" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="L-N-a-m-e-83"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="21" duration="15" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Manager"/>
+                                    </step>
+                                </step>
+                            </step>
+                        </step>
+                        <step _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                            _line="50" description="" duration="16" result="completed" taskName="clickLink">
+                            <parameter name="label" value="Home"/>
+                            <resultFile name="019_response_clickLink.html"/>
+                        </step>
+                    </step>
+                    <step _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml" _line="44"
+                        description="Iteration 9" duration="369" result="completed" taskName="iteration wrapper">
+                        <step _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                            _line="45" duration="69" result="completed" taskName="addDepartment">
+                            <parameter name="name" value="D-e-p-t-9"/>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addDepartment.xml"
+                                _line="5" description="Verifying if this is 'Welcome' page"
+                                duration="0" result="completed" taskName="verifyText">
+                                <parameter name="text" value="Welcome"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addDepartment.xml"
+                                _line="7" duration="16" result="completed" taskName="clickLink">
+                                <parameter name="label" value="Add Department"/>
+                                <resultFile name="020_response_clickLink.html"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addDepartment.xml"
+                                _line="8" duration="0" result="completed" taskName="verifyText">
+                                <parameter name="text" value="New Department:"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addDepartment.xml"
+                                _line="10" duration="0" result="completed" taskName="setInputField">
+                                <parameter name="name" value="name"/>
+                                <parameter name="value" value="D-e-p-t-9"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addDepartment.xml"
+                                _line="11" duration="37" result="completed" taskName="clickButton">
+                                <parameter name="label" value="Add Department"/>
+                                <resultFile name="021_response_clickButton.html"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addDepartment.xml"
+                                _line="12" duration="0" result="completed" taskName="verifyText">
+                                <parameter name="text" value="Department Information:"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addDepartment.xml"
+                                _line="13" duration="0" result="completed" taskName="verifyText">
+                                <parameter name="text" value="D-e-p-t-9"/>
+                            </step>
+                        </step>
+                        <step _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                            _line="46" duration="285" result="completed" taskName="repeat">
+                            <parameter name="count" value="3"/>
+                            <parameter name="countername" value="emp"/>
+                            <parameter name="startCount" value="1"/>
+                            <step _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                                _line="46" description="Iteration 1" duration="100"
+                                result="completed" taskName="iteration wrapper">
+                                <step
+                                    _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                                    _line="48" duration="100" result="completed" taskName="addEmployee">
+                                    <parameter name="firstName" value="F-N-a-m-e-91"/>
+                                    <parameter name="lastName" value="L-N-a-m-e-91"/>
+                                    <parameter name="name" value="D-e-p-t-9"/>
+                                    <parameter name="title" value="Manager"/>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="8"
+                                        description="Verifying if this is 'Department Information' page"
+                                        duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Department Information:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="9" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="D-e-p-t-9"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="11" duration="16" result="completed" taskName="clickLink">
+                                        <parameter name="label" value="Add Employee"/>
+                                        <resultFile name="022_response_clickLink.html"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="12" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="New Employee:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="14" duration="0" result="completed" taskName="setInputField">
+                                        <parameter name="name" value="firstName"/>
+                                        <parameter name="value" value="F-N-a-m-e-91"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="15" duration="0" result="completed" taskName="setInputField">
+                                        <parameter name="name" value="lastName"/>
+                                        <parameter name="value" value="L-N-a-m-e-91"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="16" duration="0" result="completed" taskName="setSelectField">
+                                        <parameter name="name" value="title"/>
+                                        <parameter name="text" value="Manager"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="17" duration="53" result="completed" taskName="clickButton">
+                                        <parameter name="label" value="Add Employee"/>
+                                        <resultFile name="023_response_clickButton.html"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="18" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Department Information:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="19" duration="16" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="F-N-a-m-e-91"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="20" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="L-N-a-m-e-91"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="21" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Manager"/>
+                                    </step>
+                                </step>
+                            </step>
+                            <step _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                                _line="46" description="Iteration 2" duration="84"
+                                result="completed" taskName="iteration wrapper">
+                                <step
+                                    _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                                    _line="48" duration="84" result="completed" taskName="addEmployee">
+                                    <parameter name="firstName" value="F-N-a-m-e-92"/>
+                                    <parameter name="lastName" value="L-N-a-m-e-92"/>
+                                    <parameter name="name" value="D-e-p-t-9"/>
+                                    <parameter name="title" value="Manager"/>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="8"
+                                        description="Verifying if this is 'Department Information' page"
+                                        duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Department Information:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="9" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="D-e-p-t-9"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="11" duration="15" result="completed" taskName="clickLink">
+                                        <parameter name="label" value="Add Employee"/>
+                                        <resultFile name="024_response_clickLink.html"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="12" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="New Employee:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="14" duration="16" result="completed" taskName="setInputField">
+                                        <parameter name="name" value="firstName"/>
+                                        <parameter name="value" value="F-N-a-m-e-92"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="15" duration="0" result="completed" taskName="setInputField">
+                                        <parameter name="name" value="lastName"/>
+                                        <parameter name="value" value="L-N-a-m-e-92"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="16" duration="0" result="completed" taskName="setSelectField">
+                                        <parameter name="name" value="title"/>
+                                        <parameter name="text" value="Manager"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="17" duration="53" result="completed" taskName="clickButton">
+                                        <parameter name="label" value="Add Employee"/>
+                                        <resultFile name="025_response_clickButton.html"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="18" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Department Information:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="19" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="F-N-a-m-e-92"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="20" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="L-N-a-m-e-92"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="21" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Manager"/>
+                                    </step>
+                                </step>
+                            </step>
+                            <step _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                                _line="46" description="Iteration 3" duration="101"
+                                result="completed" taskName="iteration wrapper">
+                                <step
+                                    _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                                    _line="48" duration="101" result="completed" taskName="addEmployee">
+                                    <parameter name="firstName" value="F-N-a-m-e-93"/>
+                                    <parameter name="lastName" value="L-N-a-m-e-93"/>
+                                    <parameter name="name" value="D-e-p-t-9"/>
+                                    <parameter name="title" value="Manager"/>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="8"
+                                        description="Verifying if this is 'Department Information' page"
+                                        duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Department Information:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="9" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="D-e-p-t-9"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="11" duration="15" result="completed" taskName="clickLink">
+                                        <parameter name="label" value="Add Employee"/>
+                                        <resultFile name="026_response_clickLink.html"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="12" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="New Employee:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="14" duration="0" result="completed" taskName="setInputField">
+                                        <parameter name="name" value="firstName"/>
+                                        <parameter name="value" value="F-N-a-m-e-93"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="15" duration="16" result="completed" taskName="setInputField">
+                                        <parameter name="name" value="lastName"/>
+                                        <parameter name="value" value="L-N-a-m-e-93"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="16" duration="0" result="completed" taskName="setSelectField">
+                                        <parameter name="name" value="title"/>
+                                        <parameter name="text" value="Manager"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="17" duration="54" result="completed" taskName="clickButton">
+                                        <parameter name="label" value="Add Employee"/>
+                                        <resultFile name="027_response_clickButton.html"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="18" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Department Information:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="19" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="F-N-a-m-e-93"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="20" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="L-N-a-m-e-93"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\addEmployee.xml"
+                                        _line="21" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Manager"/>
+                                    </step>
+                                </step>
+                            </step>
+                        </step>
+                        <step _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                            _line="50" description="" duration="15" result="completed" taskName="clickLink">
+                            <parameter name="label" value="Home"/>
+                            <resultFile name="028_response_clickLink.html"/>
+                        </step>
+                    </step>
+                </step>
+            </step>
+            <step _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml" _line="54"
+                description="deleting employees and department" duration="1442" result="completed" taskName="group">
+                <step _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml" _line="55"
+                    duration="1442" result="completed" taskName="repeat">
+                    <parameter name="count" value="3"/>
+                    <parameter name="countername" value="dep"/>
+                    <parameter name="startCount" value="7"/>
+                    <step _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml" _line="55"
+                        description="Iteration 7" duration="447" result="completed" taskName="iteration wrapper">
+                        <step _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                            _line="56" duration="69" result="completed" taskName="findDepartment">
+                            <parameter name="name" value="D-e-p-t-7"/>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\findDepartment.xml"
+                                _line="5" description="Verifying if this is 'Welcome' page"
+                                duration="0" result="completed" taskName="verifyText">
+                                <parameter name="text" value="Welcome"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\findDepartment.xml"
+                                _line="7" duration="16" result="completed" taskName="clickLink">
+                                <parameter name="label" value="Find Departments"/>
+                                <resultFile name="029_response_clickLink.html"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\findDepartment.xml"
+                                _line="8" duration="0" result="completed" taskName="verifyText">
+                                <parameter name="text" value="Find Departments:"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\findDepartment.xml"
+                                _line="10" duration="0" result="completed" taskName="setInputField">
+                                <parameter name="name" value="name"/>
+                                <parameter name="value" value="D-e-p-t-7"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\findDepartment.xml"
+                                _line="11" duration="53" result="completed" taskName="clickButton">
+                                <parameter name="label" value="Find Departments"/>
+                                <resultFile name="030_response_clickButton.html"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\findDepartment.xml"
+                                _line="12" duration="0" result="completed" taskName="verifyText">
+                                <parameter name="text" value="Department Information:"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\findDepartment.xml"
+                                _line="13" duration="0" result="completed" taskName="verifyText">
+                                <parameter name="text" value="D-e-p-t-7"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\findDepartment.xml"
+                                _line="14" duration="0" result="completed" taskName="verifyText">
+                                <parameter name="text" value="Employees"/>
+                            </step>
+                        </step>
+                        <step _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                            _line="57" duration="262" result="completed" taskName="repeat">
+                            <parameter name="count" value="3"/>
+                            <parameter name="countername" value="emp"/>
+                            <parameter name="startCount" value="1"/>
+                            <step _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                                _line="57" description="Iteration 1" duration="95"
+                                result="completed" taskName="iteration wrapper">
+                                <step
+                                    _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                                    _line="59" duration="95" result="completed" taskName="deleteEmployee">
+                                    <parameter name="firstName" value="F-N-a-m-e-71"/>
+                                    <parameter name="lastName" value="L-N-a-m-e-71"/>
+                                    <parameter name="name" value="D-e-p-t-7"/>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="7"
+                                        description="Verifying if this is 'Department Information' page"
+                                        duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Department Information:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="8" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="D-e-p-t-7"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="10" description="'Edit Employee' link" duration="15"
+                                        result="completed" taskName="clickLink">
+                                        <parameter name="htmlId" value="F-N-a-m-e-71 L-N-a-m-e-71"/>
+                                        <resultFile name="031_response_clickLink.html"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="11" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Employee:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="12" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="D-e-p-t-7"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="13" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="F-N-a-m-e-71"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="14" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="L-N-a-m-e-71"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="16" duration="47" result="completed" taskName="clickButton">
+                                        <parameter name="label" value="Delete Employee"/>
+                                        <resultFile name="032_response_clickButton.html"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="17" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Department Information:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="18" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="D-e-p-t-7"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="19" description="" duration="17" result="completed" taskName="not">
+                                        <step
+                                            _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                            _line="20" duration="16" result="failed" taskName="verifyText">
+                                            <parameter name="text" value="F-N-a-m-e-71"/>
+                                        </step>
+                                        <step
+                                            _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                            _line="21" duration="1" result="failed" taskName="verifyText">
+                                            <parameter name="text" value="L-N-a-m-e-71"/>
+                                        </step>
+                                    </step>
+                                </step>
+                            </step>
+                            <step _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                                _line="57" description="Iteration 2" duration="82"
+                                result="completed" taskName="iteration wrapper">
+                                <step
+                                    _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                                    _line="59" duration="82" result="completed" taskName="deleteEmployee">
+                                    <parameter name="firstName" value="F-N-a-m-e-72"/>
+                                    <parameter name="lastName" value="L-N-a-m-e-72"/>
+                                    <parameter name="name" value="D-e-p-t-7"/>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="7"
+                                        description="Verifying if this is 'Department Information' page"
+                                        duration="1" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Department Information:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="8" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="D-e-p-t-7"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="10" description="'Edit Employee' link" duration="19"
+                                        result="completed" taskName="clickLink">
+                                        <parameter name="htmlId" value="F-N-a-m-e-72 L-N-a-m-e-72"/>
+                                        <resultFile name="033_response_clickLink.html"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="11" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Employee:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="12" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="D-e-p-t-7"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="13" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="F-N-a-m-e-72"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="14" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="L-N-a-m-e-72"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="16" duration="31" result="completed" taskName="clickButton">
+                                        <parameter name="label" value="Delete Employee"/>
+                                        <resultFile name="034_response_clickButton.html"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="17" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Department Information:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="18" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="D-e-p-t-7"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="19" description="" duration="16" result="completed" taskName="not">
+                                        <step
+                                            _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                            _line="20" duration="0" result="failed" taskName="verifyText">
+                                            <parameter name="text" value="F-N-a-m-e-72"/>
+                                        </step>
+                                        <step
+                                            _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                            _line="21" duration="0" result="failed" taskName="verifyText">
+                                            <parameter name="text" value="L-N-a-m-e-72"/>
+                                        </step>
+                                    </step>
+                                </step>
+                            </step>
+                            <step _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                                _line="57" description="Iteration 3" duration="84"
+                                result="completed" taskName="iteration wrapper">
+                                <step
+                                    _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                                    _line="59" duration="84" result="completed" taskName="deleteEmployee">
+                                    <parameter name="firstName" value="F-N-a-m-e-73"/>
+                                    <parameter name="lastName" value="L-N-a-m-e-73"/>
+                                    <parameter name="name" value="D-e-p-t-7"/>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="7"
+                                        description="Verifying if this is 'Department Information' page"
+                                        duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Department Information:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="8" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="D-e-p-t-7"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="10" description="'Edit Employee' link" duration="22"
+                                        result="completed" taskName="clickLink">
+                                        <parameter name="htmlId" value="F-N-a-m-e-73 L-N-a-m-e-73"/>
+                                        <resultFile name="035_response_clickLink.html"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="11" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Employee:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="12" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="D-e-p-t-7"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="13" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="F-N-a-m-e-73"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="14" duration="16" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="L-N-a-m-e-73"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="16" duration="46" result="completed" taskName="clickButton">
+                                        <parameter name="label" value="Delete Employee"/>
+                                        <resultFile name="036_response_clickButton.html"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="17" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Department Information:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="18" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="D-e-p-t-7"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="19" description="" duration="0" result="completed" taskName="not">
+                                        <step
+                                            _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                            _line="20" duration="0" result="failed" taskName="verifyText">
+                                            <parameter name="text" value="F-N-a-m-e-73"/>
+                                        </step>
+                                        <step
+                                            _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                            _line="21" duration="0" result="failed" taskName="verifyText">
+                                            <parameter name="text" value="L-N-a-m-e-73"/>
+                                        </step>
+                                    </step>
+                                </step>
+                            </step>
+                        </step>
+                        <step _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                            _line="61" duration="116" result="completed" taskName="deleteDepartment">
+                            <parameter name="name" value="D-e-p-t-7"/>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteDepartment.xml"
+                                _line="5"
+                                description="Verifying if this is 'Department Information' page"
+                                duration="0" result="completed" taskName="verifyText">
+                                <parameter name="text" value="Department Information:"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteDepartment.xml"
+                                _line="6" duration="0" result="completed" taskName="verifyText">
+                                <parameter name="text" value="D-e-p-t-7"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteDepartment.xml"
+                                _line="8" duration="16" result="completed" taskName="clickLink">
+                                <parameter name="label" value="Edit Department"/>
+                                <resultFile name="037_response_clickLink.html"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteDepartment.xml"
+                                _line="9" duration="0" result="completed" taskName="verifyText">
+                                <parameter name="text" value="Department:"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteDepartment.xml"
+                                _line="10" duration="17" result="completed" taskName="verifyText">
+                                <parameter name="text" value="D-e-p-t-7"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteDepartment.xml"
+                                _line="12" duration="52" result="completed" taskName="clickButton">
+                                <parameter name="label" value="Delete Department"/>
+                                <resultFile name="038_response_clickButton.html"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteDepartment.xml"
+                                _line="13" duration="0" result="completed" taskName="verifyText">
+                                <parameter name="text" value="Find Departments:"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteDepartment.xml"
+                                _line="14" description="" duration="0" result="completed" taskName="not">
+                                <step
+                                    _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteDepartment.xml"
+                                    _line="15" duration="0" result="failed" taskName="verifyText">
+                                    <parameter name="text" value="D-e-p-t-7"/>
+                                </step>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteDepartment.xml"
+                                _line="18" duration="0" result="completed" taskName="setInputField">
+                                <parameter name="name" value="name"/>
+                                <parameter name="value" value="D-e-p-t-7"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteDepartment.xml"
+                                _line="19" duration="16" result="completed" taskName="clickButton">
+                                <parameter name="label" value="Find Departments"/>
+                                <resultFile name="039_response_clickButton.html"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteDepartment.xml"
+                                _line="20" duration="0" result="completed" taskName="verifyText">
+                                <parameter name="text" value="has not been found"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteDepartment.xml"
+                                _line="21" duration="0" result="completed" taskName="verifyText">
+                                <parameter name="text" value="D-e-p-t-7"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteDepartment.xml"
+                                _line="22" duration="15" result="completed" taskName="clickLink">
+                                <parameter name="label" value="Home"/>
+                                <resultFile name="040_response_clickLink.html"/>
+                            </step>
+                        </step>
+                    </step>
+                    <step _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml" _line="55"
+                        description="Iteration 8" duration="541" result="completed" taskName="iteration wrapper">
+                        <step _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                            _line="56" duration="85" result="completed" taskName="findDepartment">
+                            <parameter name="name" value="D-e-p-t-8"/>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\findDepartment.xml"
+                                _line="5" description="Verifying if this is 'Welcome' page"
+                                duration="0" result="completed" taskName="verifyText">
+                                <parameter name="text" value="Welcome"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\findDepartment.xml"
+                                _line="7" duration="23" result="completed" taskName="clickLink">
+                                <parameter name="label" value="Find Departments"/>
+                                <resultFile name="041_response_clickLink.html"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\findDepartment.xml"
+                                _line="8" duration="0" result="completed" taskName="verifyText">
+                                <parameter name="text" value="Find Departments:"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\findDepartment.xml"
+                                _line="10" duration="0" result="completed" taskName="setInputField">
+                                <parameter name="name" value="name"/>
+                                <parameter name="value" value="D-e-p-t-8"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\findDepartment.xml"
+                                _line="11" duration="31" result="completed" taskName="clickButton">
+                                <parameter name="label" value="Find Departments"/>
+                                <resultFile name="042_response_clickButton.html"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\findDepartment.xml"
+                                _line="12" duration="0" result="completed" taskName="verifyText">
+                                <parameter name="text" value="Department Information:"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\findDepartment.xml"
+                                _line="13" duration="16" result="completed" taskName="verifyText">
+                                <parameter name="text" value="D-e-p-t-8"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\findDepartment.xml"
+                                _line="14" duration="0" result="completed" taskName="verifyText">
+                                <parameter name="text" value="Employees"/>
+                            </step>
+                        </step>
+                        <step _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                            _line="57" duration="285" result="completed" taskName="repeat">
+                            <parameter name="count" value="3"/>
+                            <parameter name="countername" value="emp"/>
+                            <parameter name="startCount" value="1"/>
+                            <step _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                                _line="57" description="Iteration 1" duration="85"
+                                result="completed" taskName="iteration wrapper">
+                                <step
+                                    _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                                    _line="59" duration="85" result="completed" taskName="deleteEmployee">
+                                    <parameter name="firstName" value="F-N-a-m-e-81"/>
+                                    <parameter name="lastName" value="L-N-a-m-e-81"/>
+                                    <parameter name="name" value="D-e-p-t-8"/>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="7"
+                                        description="Verifying if this is 'Department Information' page"
+                                        duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Department Information:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="8" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="D-e-p-t-8"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="10" description="'Edit Employee' link" duration="16"
+                                        result="completed" taskName="clickLink">
+                                        <parameter name="htmlId" value="F-N-a-m-e-81 L-N-a-m-e-81"/>
+                                        <resultFile name="043_response_clickLink.html"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="11" duration="1" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Employee:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="12" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="D-e-p-t-8"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="13" duration="1" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="F-N-a-m-e-81"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="14" duration="1" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="L-N-a-m-e-81"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="16" duration="49" result="completed" taskName="clickButton">
+                                        <parameter name="label" value="Delete Employee"/>
+                                        <resultFile name="044_response_clickButton.html"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="17" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Department Information:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="18" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="D-e-p-t-8"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="19" description="" duration="0" result="completed" taskName="not">
+                                        <step
+                                            _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                            _line="20" duration="0" result="failed" taskName="verifyText">
+                                            <parameter name="text" value="F-N-a-m-e-81"/>
+                                        </step>
+                                        <step
+                                            _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                            _line="21" duration="0" result="failed" taskName="verifyText">
+                                            <parameter name="text" value="L-N-a-m-e-81"/>
+                                        </step>
+                                    </step>
+                                </step>
+                            </step>
+                            <step _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                                _line="57" description="Iteration 2" duration="115"
+                                result="completed" taskName="iteration wrapper">
+                                <step
+                                    _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                                    _line="59" duration="115" result="completed" taskName="deleteEmployee">
+                                    <parameter name="firstName" value="F-N-a-m-e-82"/>
+                                    <parameter name="lastName" value="L-N-a-m-e-82"/>
+                                    <parameter name="name" value="D-e-p-t-8"/>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="7"
+                                        description="Verifying if this is 'Department Information' page"
+                                        duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Department Information:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="8" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="D-e-p-t-8"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="10" description="'Edit Employee' link" duration="31"
+                                        result="completed" taskName="clickLink">
+                                        <parameter name="htmlId" value="F-N-a-m-e-82 L-N-a-m-e-82"/>
+                                        <resultFile name="045_response_clickLink.html"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="11" duration="1" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Employee:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="12" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="D-e-p-t-8"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="13" duration="1" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="F-N-a-m-e-82"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="14" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="L-N-a-m-e-82"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="16" duration="47" result="completed" taskName="clickButton">
+                                        <parameter name="label" value="Delete Employee"/>
+                                        <resultFile name="046_response_clickButton.html"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="17" duration="15" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Department Information:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="18" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="D-e-p-t-8"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="19" description="" duration="0" result="completed" taskName="not">
+                                        <step
+                                            _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                            _line="20" duration="0" result="failed" taskName="verifyText">
+                                            <parameter name="text" value="F-N-a-m-e-82"/>
+                                        </step>
+                                        <step
+                                            _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                            _line="21" duration="0" result="failed" taskName="verifyText">
+                                            <parameter name="text" value="L-N-a-m-e-82"/>
+                                        </step>
+                                    </step>
+                                </step>
+                            </step>
+                            <step _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                                _line="57" description="Iteration 3" duration="85"
+                                result="completed" taskName="iteration wrapper">
+                                <step
+                                    _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                                    _line="59" duration="85" result="completed" taskName="deleteEmployee">
+                                    <parameter name="firstName" value="F-N-a-m-e-83"/>
+                                    <parameter name="lastName" value="L-N-a-m-e-83"/>
+                                    <parameter name="name" value="D-e-p-t-8"/>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="7"
+                                        description="Verifying if this is 'Department Information' page"
+                                        duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Department Information:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="8" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="D-e-p-t-8"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="10" description="'Edit Employee' link" duration="16"
+                                        result="completed" taskName="clickLink">
+                                        <parameter name="htmlId" value="F-N-a-m-e-83 L-N-a-m-e-83"/>
+                                        <resultFile name="047_response_clickLink.html"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="11" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Employee:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="12" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="D-e-p-t-8"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="13" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="F-N-a-m-e-83"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="14" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="L-N-a-m-e-83"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="16" duration="47" result="completed" taskName="clickButton">
+                                        <parameter name="label" value="Delete Employee"/>
+                                        <resultFile name="048_response_clickButton.html"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="17" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Department Information:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="18" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="D-e-p-t-8"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="19" description="" duration="0" result="completed" taskName="not">
+                                        <step
+                                            _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                            _line="20" duration="0" result="failed" taskName="verifyText">
+                                            <parameter name="text" value="F-N-a-m-e-83"/>
+                                        </step>
+                                        <step
+                                            _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                            _line="21" duration="0" result="failed" taskName="verifyText">
+                                            <parameter name="text" value="L-N-a-m-e-83"/>
+                                        </step>
+                                    </step>
+                                </step>
+                            </step>
+                        </step>
+                        <step _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                            _line="61" duration="171" result="completed" taskName="deleteDepartment">
+                            <parameter name="name" value="D-e-p-t-8"/>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteDepartment.xml"
+                                _line="5"
+                                description="Verifying if this is 'Department Information' page"
+                                duration="0" result="completed" taskName="verifyText">
+                                <parameter name="text" value="Department Information:"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteDepartment.xml"
+                                _line="6" duration="0" result="completed" taskName="verifyText">
+                                <parameter name="text" value="D-e-p-t-8"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteDepartment.xml"
+                                _line="8" duration="32" result="completed" taskName="clickLink">
+                                <parameter name="label" value="Edit Department"/>
+                                <resultFile name="049_response_clickLink.html"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteDepartment.xml"
+                                _line="9" duration="1" result="completed" taskName="verifyText">
+                                <parameter name="text" value="Department:"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteDepartment.xml"
+                                _line="10" duration="0" result="completed" taskName="verifyText">
+                                <parameter name="text" value="D-e-p-t-8"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteDepartment.xml"
+                                _line="12" duration="57" result="completed" taskName="clickButton">
+                                <parameter name="label" value="Delete Department"/>
+                                <resultFile name="050_response_clickButton.html"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteDepartment.xml"
+                                _line="13" duration="0" result="completed" taskName="verifyText">
+                                <parameter name="text" value="Find Departments:"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteDepartment.xml"
+                                _line="14" description="" duration="0" result="completed" taskName="not">
+                                <step
+                                    _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteDepartment.xml"
+                                    _line="15" duration="0" result="failed" taskName="verifyText">
+                                    <parameter name="text" value="D-e-p-t-8"/>
+                                </step>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteDepartment.xml"
+                                _line="18" duration="16" result="completed" taskName="setInputField">
+                                <parameter name="name" value="name"/>
+                                <parameter name="value" value="D-e-p-t-8"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteDepartment.xml"
+                                _line="19" duration="15" result="completed" taskName="clickButton">
+                                <parameter name="label" value="Find Departments"/>
+                                <resultFile name="051_response_clickButton.html"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteDepartment.xml"
+                                _line="20" duration="16" result="completed" taskName="verifyText">
+                                <parameter name="text" value="has not been found"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteDepartment.xml"
+                                _line="21" duration="0" result="completed" taskName="verifyText">
+                                <parameter name="text" value="D-e-p-t-8"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteDepartment.xml"
+                                _line="22" duration="15" result="completed" taskName="clickLink">
+                                <parameter name="label" value="Home"/>
+                                <resultFile name="052_response_clickLink.html"/>
+                            </step>
+                        </step>
+                    </step>
+                    <step _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml" _line="55"
+                        description="Iteration 9" duration="454" result="completed" taskName="iteration wrapper">
+                        <step _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                            _line="56" duration="54" result="completed" taskName="findDepartment">
+                            <parameter name="name" value="D-e-p-t-9"/>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\findDepartment.xml"
+                                _line="5" description="Verifying if this is 'Welcome' page"
+                                duration="0" result="completed" taskName="verifyText">
+                                <parameter name="text" value="Welcome"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\findDepartment.xml"
+                                _line="7" duration="23" result="completed" taskName="clickLink">
+                                <parameter name="label" value="Find Departments"/>
+                                <resultFile name="053_response_clickLink.html"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\findDepartment.xml"
+                                _line="8" duration="0" result="completed" taskName="verifyText">
+                                <parameter name="text" value="Find Departments:"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\findDepartment.xml"
+                                _line="10" duration="0" result="completed" taskName="setInputField">
+                                <parameter name="name" value="name"/>
+                                <parameter name="value" value="D-e-p-t-9"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\findDepartment.xml"
+                                _line="11" duration="31" result="completed" taskName="clickButton">
+                                <parameter name="label" value="Find Departments"/>
+                                <resultFile name="054_response_clickButton.html"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\findDepartment.xml"
+                                _line="12" duration="0" result="completed" taskName="verifyText">
+                                <parameter name="text" value="Department Information:"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\findDepartment.xml"
+                                _line="13" duration="0" result="completed" taskName="verifyText">
+                                <parameter name="text" value="D-e-p-t-9"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\findDepartment.xml"
+                                _line="14" duration="0" result="completed" taskName="verifyText">
+                                <parameter name="text" value="Employees"/>
+                            </step>
+                        </step>
+                        <step _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                            _line="57" duration="284" result="completed" taskName="repeat">
+                            <parameter name="count" value="3"/>
+                            <parameter name="countername" value="emp"/>
+                            <parameter name="startCount" value="1"/>
+                            <step _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                                _line="57" description="Iteration 1" duration="100"
+                                result="completed" taskName="iteration wrapper">
+                                <step
+                                    _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                                    _line="59" duration="100" result="completed" taskName="deleteEmployee">
+                                    <parameter name="firstName" value="F-N-a-m-e-91"/>
+                                    <parameter name="lastName" value="L-N-a-m-e-91"/>
+                                    <parameter name="name" value="D-e-p-t-9"/>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="7"
+                                        description="Verifying if this is 'Department Information' page"
+                                        duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Department Information:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="8" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="D-e-p-t-9"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="10" description="'Edit Employee' link" duration="31"
+                                        result="completed" taskName="clickLink">
+                                        <parameter name="htmlId" value="F-N-a-m-e-91 L-N-a-m-e-91"/>
+                                        <resultFile name="055_response_clickLink.html"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="11" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Employee:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="12" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="D-e-p-t-9"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="13" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="F-N-a-m-e-91"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="14" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="L-N-a-m-e-91"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="16" duration="37" result="completed" taskName="clickButton">
+                                        <parameter name="label" value="Delete Employee"/>
+                                        <resultFile name="056_response_clickButton.html"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="17" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Department Information:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="18" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="D-e-p-t-9"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="19" description="" duration="16" result="completed" taskName="not">
+                                        <step
+                                            _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                            _line="20" duration="0" result="failed" taskName="verifyText">
+                                            <parameter name="text" value="F-N-a-m-e-91"/>
+                                        </step>
+                                        <step
+                                            _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                            _line="21" duration="0" result="failed" taskName="verifyText">
+                                            <parameter name="text" value="L-N-a-m-e-91"/>
+                                        </step>
+                                    </step>
+                                </step>
+                            </step>
+                            <step _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                                _line="57" description="Iteration 2" duration="100"
+                                result="completed" taskName="iteration wrapper">
+                                <step
+                                    _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                                    _line="59" duration="100" result="completed" taskName="deleteEmployee">
+                                    <parameter name="firstName" value="F-N-a-m-e-92"/>
+                                    <parameter name="lastName" value="L-N-a-m-e-92"/>
+                                    <parameter name="name" value="D-e-p-t-9"/>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="7"
+                                        description="Verifying if this is 'Department Information' page"
+                                        duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Department Information:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="8" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="D-e-p-t-9"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="10" description="'Edit Employee' link" duration="15"
+                                        result="completed" taskName="clickLink">
+                                        <parameter name="htmlId" value="F-N-a-m-e-92 L-N-a-m-e-92"/>
+                                        <resultFile name="057_response_clickLink.html"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="11" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Employee:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="12" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="D-e-p-t-9"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="13" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="F-N-a-m-e-92"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="14" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="L-N-a-m-e-92"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="16" duration="53" result="completed" taskName="clickButton">
+                                        <parameter name="label" value="Delete Employee"/>
+                                        <resultFile name="058_response_clickButton.html"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="17" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Department Information:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="18" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="D-e-p-t-9"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="19" description="" duration="16" result="completed" taskName="not">
+                                        <step
+                                            _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                            _line="20" duration="16" result="failed" taskName="verifyText">
+                                            <parameter name="text" value="F-N-a-m-e-92"/>
+                                        </step>
+                                        <step
+                                            _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                            _line="21" duration="0" result="failed" taskName="verifyText">
+                                            <parameter name="text" value="L-N-a-m-e-92"/>
+                                        </step>
+                                    </step>
+                                </step>
+                            </step>
+                            <step _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                                _line="57" description="Iteration 3" duration="84"
+                                result="completed" taskName="iteration wrapper">
+                                <step
+                                    _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                                    _line="59" duration="84" result="completed" taskName="deleteEmployee">
+                                    <parameter name="firstName" value="F-N-a-m-e-93"/>
+                                    <parameter name="lastName" value="L-N-a-m-e-93"/>
+                                    <parameter name="name" value="D-e-p-t-9"/>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="7"
+                                        description="Verifying if this is 'Department Information' page"
+                                        duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Department Information:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="8" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="D-e-p-t-9"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="10" description="'Edit Employee' link" duration="15"
+                                        result="completed" taskName="clickLink">
+                                        <parameter name="htmlId" value="F-N-a-m-e-93 L-N-a-m-e-93"/>
+                                        <resultFile name="059_response_clickLink.html"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="11" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Employee:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="12" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="D-e-p-t-9"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="13" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="F-N-a-m-e-93"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="14" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="L-N-a-m-e-93"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="16" duration="53" result="completed" taskName="clickButton">
+                                        <parameter name="label" value="Delete Employee"/>
+                                        <resultFile name="060_response_clickButton.html"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="17" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="Department Information:"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="18" duration="0" result="completed" taskName="verifyText">
+                                        <parameter name="text" value="D-e-p-t-9"/>
+                                    </step>
+                                    <step
+                                        _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                        _line="19" description="" duration="0" result="completed" taskName="not">
+                                        <step
+                                            _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                            _line="20" duration="0" result="failed" taskName="verifyText">
+                                            <parameter name="text" value="F-N-a-m-e-93"/>
+                                        </step>
+                                        <step
+                                            _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteEmployee.xml"
+                                            _line="21" duration="0" result="failed" taskName="verifyText">
+                                            <parameter name="text" value="L-N-a-m-e-93"/>
+                                        </step>
+                                    </step>
+                                </step>
+                            </step>
+                        </step>
+                        <step _filename="c:\0_workspace\KP_Spring01\webtest\tests\test01.xml"
+                            _line="61" duration="116" result="completed" taskName="deleteDepartment">
+                            <parameter name="name" value="D-e-p-t-9"/>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteDepartment.xml"
+                                _line="5"
+                                description="Verifying if this is 'Department Information' page"
+                                duration="0" result="completed" taskName="verifyText">
+                                <parameter name="text" value="Department Information:"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteDepartment.xml"
+                                _line="6" duration="0" result="completed" taskName="verifyText">
+                                <parameter name="text" value="D-e-p-t-9"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteDepartment.xml"
+                                _line="8" duration="32" result="completed" taskName="clickLink">
+                                <parameter name="label" value="Edit Department"/>
+                                <resultFile name="061_response_clickLink.html"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteDepartment.xml"
+                                _line="9" duration="0" result="completed" taskName="verifyText">
+                                <parameter name="text" value="Department:"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteDepartment.xml"
+                                _line="10" duration="0" result="completed" taskName="verifyText">
+                                <parameter name="text" value="D-e-p-t-9"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteDepartment.xml"
+                                _line="12" duration="38" result="completed" taskName="clickButton">
+                                <parameter name="label" value="Delete Department"/>
+                                <resultFile name="062_response_clickButton.html"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteDepartment.xml"
+                                _line="13" duration="0" result="completed" taskName="verifyText">
+                                <parameter name="text" value="Find Departments:"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteDepartment.xml"
+                                _line="14" description="" duration="0" result="completed" taskName="not">
+                                <step
+                                    _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteDepartment.xml"
+                                    _line="15" duration="0" result="failed" taskName="verifyText">
+                                    <parameter name="text" value="D-e-p-t-9"/>
+                                </step>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteDepartment.xml"
+                                _line="18" duration="0" result="completed" taskName="setInputField">
+                                <parameter name="name" value="name"/>
+                                <parameter name="value" value="D-e-p-t-9"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteDepartment.xml"
+                                _line="19" duration="16" result="completed" taskName="clickButton">
+                                <parameter name="label" value="Find Departments"/>
+                                <resultFile name="063_response_clickButton.html"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteDepartment.xml"
+                                _line="20" duration="0" result="completed" taskName="verifyText">
+                                <parameter name="text" value="has not been found"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteDepartment.xml"
+                                _line="21" duration="0" result="completed" taskName="verifyText">
+                                <parameter name="text" value="D-e-p-t-9"/>
+                            </step>
+                            <step
+                                _filename="c:\0_workspace\KP_Spring01\webtest\definitions\deleteDepartment.xml"
+                                _line="22" duration="15" result="completed" taskName="clickLink">
+                                <parameter name="label" value="Home"/>
+                                <resultFile name="064_response_clickLink.html"/>
+                            </step>
+                        </step>
+                    </step>
+                </step>
+            </step>
+        </results>
+    </testresult>
+</summary>

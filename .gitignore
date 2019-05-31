@@ -1,0 +1,7 @@
+.settings/
+0_batch/*.lnk
+docs/apidocs
+logs/
+target/
+.classpath
+.project

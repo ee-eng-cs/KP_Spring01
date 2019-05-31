@@ -1,0 +1,24 @@
+<macrodef name="deleteEmployee" description="Delete employee">
+	<attribute name="name"/>
+	<attribute name="firstName"/>
+	<attribute name="lastName"/>
+
+	<sequential>
+		<verifyText description="Verifying if this is 'Department Information' page" text="Department Information:"/>
+		<verifyText text="@{name}"/>
+
+		<clickLink description="'Edit Employee' link" htmlId="@{firstName} @{lastName}" />
+		<verifyText text="Employee:"/>
+		<verifyText text="@{name}"/>
+		<verifyText text="@{firstName}"/>
+		<verifyText text="@{lastName}"/>
+
+		<clickButton label="Delete Employee"/>
+		<verifyText text="Department Information:"/>
+		<verifyText text="@{name}"/>
+		<not description="">
+			<verifyText text="@{firstName}"/>
+			<verifyText text="@{lastName}"/>
+		</not>
+	</sequential>
+</macrodef>

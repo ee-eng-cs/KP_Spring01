@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE project SYSTEM "../dtd/Project.dtd">
+
+<project name="test01" basedir="." default="test01" >
+	<property file="../build.properties"/>
+    <import file="${webtest.home}/webtest.xml"/>
+	<import file="../definitions.xml" description="Import custom definitions (if any)"/>
+    <!-- . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . -->
+    <!--          TEST 01                                                    -->
+    <!-- . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . -->
+    <target name="test01" depends="wt.defineMacros">
+        <webtest name="test01-1" description="Loop testing 'Update'">
+			&config;
+            <steps>
+                <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+                <group description="going to 'Welcome' page" >
+					<startApplication/>
+                </group>
+                <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+                <group description="going to 'Department Information' page" >
+					<repeat startCount="1" count="3" countername="dep">
+						<findDepartment name="${dep.prefix}#{dep}"/>
+						<updateDepartment name="${dep.prefix}#{dep}"/>
+						<repeat startCount="1" count="3" countername="emp">
+							<updateEmployee name="${dep.prefix}#{dep}" 
+								firstName="${fName.prefix}#{dep}#{emp}" lastName="${lName.prefix}#{dep}#{emp}"/>
+						</repeat>
+						<clickLink description="" label="Home"/>
+					</repeat>
+                </group>
+                <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+            </steps>
+        </webtest>
+        <webtest name="test01-2" description="Loop testing 'Add' and 'Delete'">
+			&config;
+            <steps>
+                <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+                <group description="going to 'Welcome' page" >
+					<startApplication/>
+                </group>
+                <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+                <group description="adding department with employees" >
+					<repeat startCount="7" count="3" countername="dep">
+						<addDepartment name="${dep.prefix}#{dep}"/>
+						<repeat startCount="1" count="3" countername="emp">
+							<addEmployee name="${dep.prefix}#{dep}"
+								firstName="${fName.prefix}#{dep}#{emp}" lastName="${lName.prefix}#{dep}#{emp}" title="${title}"/>
+						</repeat>
+						<clickLink description="" label="Home"/>
+					</repeat>
+                </group>
+                <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+                <group description="deleting employees and department" >
+					<repeat startCount="7" count="3" countername="dep">
+						<findDepartment name="${dep.prefix}#{dep}"/>
+						<repeat startCount="1" count="3" countername="emp">
+							<deleteEmployee name="${dep.prefix}#{dep}"
+								firstName="${fName.prefix}#{dep}#{emp}" lastName="${lName.prefix}#{dep}#{emp}"/>
+						</repeat>
+						<deleteDepartment name="${dep.prefix}#{dep}"/>
+					</repeat>
+                </group>
+                <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+            </steps>
+        </webtest>
+    </target>
+</project>

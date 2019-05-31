@@ -1,0 +1,25 @@
+USE kp_spring01;
+
+CREATE TABLE departments (
+	id INT(4) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	name VARCHAR(30),
+	INDEX(name)
+) engine=InnoDB;
+
+CREATE TABLE titles (
+	id INT(4) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	name VARCHAR(30),
+	INDEX(name)
+) engine=InnoDB;
+
+CREATE TABLE employees (
+	id INT(4) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	first_name VARCHAR(30),
+	last_name VARCHAR(30),
+	department_id INT(4) UNSIGNED NOT NULL,
+	title_id INT(4) UNSIGNED NOT NULL,
+	INDEX(last_name)
+) engine=InnoDB;
+
+ALTER TABLE employees ADD CONSTRAINT fk_employees_departments FOREIGN KEY (department_id) REFERENCES departments(id);
+ALTER TABLE employees ADD CONSTRAINT fk_employees_titles FOREIGN KEY (title_id) REFERENCES titles(id);

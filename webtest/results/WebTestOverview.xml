@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<overview Implementation-Title="Canoo Webtest" Implementation-Version="development">
+	<folder name="001_Test011">
+<summary duration='3586' name='test01-1' starttime='Tue Dec 12 19:04:54 CET 2017' successful='yes'><topsteps total='2' notexecuted='0' failed='0' successful='2'></topsteps><steps total='178' notexecuted='1' failed='0' successful='177'></steps><timingprofile average='95' number='34'><range number='33' from='0' to='1'></range><range number='1' from='1' to='3'></range><range number='0' from='3' to='5'></range><range number='0' from='5' to='10'></range><range number='0' from='10' to='30'></range><range number='0' from='30'></range></timingprofile></summary>
+</folder>
+<folder name="002_Test012">
+<summary duration='2543' name='test01-2' starttime='Tue Dec 12 19:04:58 CET 2017' successful='yes'><topsteps total='3' notexecuted='0' failed='0' successful='3'></topsteps><steps total='380' notexecuted='0' failed='21' successful='359'></steps><timingprofile average='29' number='64'><range number='64' from='0' to='1'></range><range number='0' from='1' to='3'></range><range number='0' from='3' to='5'></range><range number='0' from='5' to='10'></range><range number='0' from='10' to='30'></range><range number='0' from='30'></range></timingprofile></summary>
+</folder>
+
+</overview>

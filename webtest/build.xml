@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<project name="WebTest" basedir="." default="wt.full">
+	<property file="build.properties"/>
+	<import file="definitions.xml" description="Import custom definitions (if any)"/>
+	<import file="${webtest.home}/webtest.xml" />
+</project>

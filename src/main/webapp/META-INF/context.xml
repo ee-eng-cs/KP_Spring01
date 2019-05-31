@@ -1,0 +1,4 @@
+<!-- Tomcat context descriptor used for specifying a custom ClassLoader -->
+<Context path="/kp_spring01" reloadable="false">
+	<Loader loaderClass="org.springframework.instrument.classloading.tomcat.TomcatInstrumentableClassLoader" useSystemClassLoaderAsParent="false"/>
+</Context>

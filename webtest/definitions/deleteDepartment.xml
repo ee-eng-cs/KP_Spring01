@@ -1,0 +1,24 @@
+<macrodef name="deleteDepartment" description="Delete department">
+	<attribute name="name"/>
+
+	<sequential>
+		<verifyText description="Verifying if this is 'Department Information' page" text="Department Information:"/>
+		<verifyText text="@{name}"/>
+
+		<clickLink label="Edit Department" />
+		<verifyText text="Department:"/>
+		<verifyText text="@{name}"/>
+
+		<clickButton label="Delete Department"/>
+		<verifyText text="Find Departments:"/>
+		<not description="">
+			<verifyText text="@{name}"/>
+		</not>
+
+		<setInputField name="name" value="@{name}"/>
+		<clickButton label="Find Departments"/>
+		<verifyText text="has not been found"/>
+		<verifyText text="@{name}"/>
+		<clickLink label="Home"/>
+	</sequential>
+</macrodef>

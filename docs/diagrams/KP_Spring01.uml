@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Package xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_Oe4SUa2rEd6COMKCBtciww" name="kp.company">
+  <elementImport xmi:id="_Og0MAK2rEd6COMKCBtciww">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+  </elementImport>
+  <elementImport xmi:id="_Og9V8K2rEd6COMKCBtciww">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+  </elementImport>
+  <elementImport xmi:id="_Og9V8a2rEd6COMKCBtciww">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
+  </elementImport>
+  <elementImport xmi:id="_Og9V8q2rEd6COMKCBtciww">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_RgbXwK2rEd6COMKCBtciww" name="BaseEntity">
+    <ownedAttribute xmi:id="_5wSt8K2rEd6COMKCBtciww" name="id" aggregation="composite"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_rEfn4K2rEd6COMKCBtciww" name="NamedEntity">
+    <generalization xmi:id="_WMFZIK2sEd6COMKCBtciww" general="_RgbXwK2rEd6COMKCBtciww"/>
+    <ownedAttribute xmi:id="_9-dXgK2rEd6COMKCBtciww" name="name" aggregation="composite"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_uimtgK2rEd6COMKCBtciww" name="Person">
+    <generalization xmi:id="_JVP0IK2tEd6COMKCBtciww" general="_RgbXwK2rEd6COMKCBtciww"/>
+    <ownedAttribute xmi:id="_KUxXcK2tEd6COMKCBtciww" name="firstName" aggregation="composite"/>
+    <ownedAttribute xmi:id="_MPpvwK2tEd6COMKCBtciww" name="lastName" aggregation="composite"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_v9D5UK2rEd6COMKCBtciww" name="Employee">
+    <generalization xmi:id="_1MkOoK2sEd6COMKCBtciww" general="_uimtgK2rEd6COMKCBtciww"/>
+    <ownedAttribute xmi:id="__Ux0wK2sEd6COMKCBtciww" name="department_id" aggregation="composite"/>
+    <ownedAttribute xmi:id="_Bbj7EK2tEd6COMKCBtciww" name="title_id" aggregation="composite"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_xIWAsK2rEd6COMKCBtciww" name="Department">
+    <generalization xmi:id="_zuGFgK2sEd6COMKCBtciww" general="_rEfn4K2rEd6COMKCBtciww"/>
+    <ownedAttribute xmi:id="_8fkiMK2sEd6COMKCBtciww" name="employees" aggregation="composite"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_ysBZ8K2rEd6COMKCBtciww" name="Title">
+    <generalization xmi:id="_vbBGwK2sEd6COMKCBtciww" general="_rEfn4K2rEd6COMKCBtciww"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_2IP-UK2tEd6COMKCBtciww" name="has a employee" memberEnd="_2IP-Ua2tEd6COMKCBtciww _2IP-VK2tEd6COMKCBtciww">
+    <ownedEnd xmi:id="_2IP-Ua2tEd6COMKCBtciww" name="src" type="_xIWAsK2rEd6COMKCBtciww" association="_2IP-UK2tEd6COMKCBtciww">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2IP-U62tEd6COMKCBtciww" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2IP-Uq2tEd6COMKCBtciww" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_2IP-VK2tEd6COMKCBtciww" name="dst" type="_v9D5UK2rEd6COMKCBtciww" aggregation="composite" association="_2IP-UK2tEd6COMKCBtciww">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2IP-Vq2tEd6COMKCBtciww" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2IP-Va2tEd6COMKCBtciww" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_2qKZoK9PEd6PPOLiymmZcg" name="has a title" memberEnd="_2qKZoa9PEd6PPOLiymmZcg _2qKZpK9PEd6PPOLiymmZcg">
+    <ownedEnd xmi:id="_2qKZoa9PEd6PPOLiymmZcg" name="src" type="_v9D5UK2rEd6COMKCBtciww" association="_2qKZoK9PEd6PPOLiymmZcg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2qKZo69PEd6PPOLiymmZcg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2qKZoq9PEd6PPOLiymmZcg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_2qKZpK9PEd6PPOLiymmZcg" name="dst" type="_ysBZ8K2rEd6COMKCBtciww" association="_2qKZoK9PEd6PPOLiymmZcg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2qKZpq9PEd6PPOLiymmZcg" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2qKZpa9PEd6PPOLiymmZcg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="__L7ZgLM4Ed69YqZXhWTy3g" name="Company">
+    <ownedOperation xmi:id="_N4LLgLM5Ed69YqZXhWTy3g" name="getTitles">
+      <ownedParameter xmi:id="_R_NSULM5Ed69YqZXhWTy3g" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_V9BLsLM5Ed69YqZXhWTy3g" name="findDepartments">
+      <ownedParameter xmi:id="_bJhs0LM5Ed69YqZXhWTy3g" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_cD2AALM5Ed69YqZXhWTy3g" name="loadDepartment">
+      <ownedParameter xmi:id="_fbkJwLM5Ed69YqZXhWTy3g" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_gIpSMLM5Ed69YqZXhWTy3g" name="loadEmployee">
+      <ownedParameter xmi:id="_ilJw4LM5Ed69YqZXhWTy3g" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_lLoD4LM5Ed69YqZXhWTy3g" name="storeDepartment">
+      <ownedParameter xmi:id="_l7-iwLM5Ed69YqZXhWTy3g" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_mhBwkLM5Ed69YqZXhWTy3g" name="storeEmployee">
+      <ownedParameter xmi:id="_oHYDULM5Ed69YqZXhWTy3g" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_qlYW0LM5Ed69YqZXhWTy3g" name="deleteDepartment">
+      <ownedParameter xmi:id="_rTgBELM5Ed69YqZXhWTy3g" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_sK_CsLM5Ed69YqZXhWTy3g" name="deleteEmployee">
+      <ownedParameter xmi:id="_ttxrILM5Ed69YqZXhWTy3g" direction="return"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_1U2xQLM5Ed69YqZXhWTy3g" name="SimpleJdbcCompany">
+    <generalization xmi:id="_HPcukLM6Ed69YqZXhWTy3g" general="__L7ZgLM4Ed69YqZXhWTy3g"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_47KJkLM5Ed69YqZXhWTy3g" name="Dummy"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="__cUJcLM5Ed69YqZXhWTy3g" name="EntityManagerCompany">
+    <generalization xmi:id="_KsO-gLM6Ed69YqZXhWTy3g" general="__L7ZgLM4Ed69YqZXhWTy3g"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_BLdL0LM6Ed69YqZXhWTy3g" name="HibernateCompany">
+    <generalization xmi:id="_J7lksLM6Ed69YqZXhWTy3g" general="__L7ZgLM4Ed69YqZXhWTy3g"/>
+  </packagedElement>
+</uml:Package>

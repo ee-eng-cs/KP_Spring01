@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+
+<!--
+This file is generated automatically from the information contained in the folder definitions.
+Do not edit it else you risk to lose your changes.
+-->
+
+<!DOCTYPE project SYSTEM "dtd/Project.dtd"
+[
+ <!ENTITY definitions__addDepartment__xml SYSTEM "definitions/addDepartment.xml">
+ <!ENTITY definitions__addEmployee__xml SYSTEM "definitions/addEmployee.xml">
+ <!ENTITY definitions__deleteDepartment__xml SYSTEM "definitions/deleteDepartment.xml">
+ <!ENTITY definitions__deleteEmployee__xml SYSTEM "definitions/deleteEmployee.xml">
+ <!ENTITY definitions__findDepartment__xml SYSTEM "definitions/findDepartment.xml">
+ <!ENTITY definitions__startApplication__xml SYSTEM "definitions/startApplication.xml">
+ <!ENTITY definitions__updateDepartment__xml SYSTEM "definitions/updateDepartment.xml">
+ <!ENTITY definitions__updateEmployee__xml SYSTEM "definitions/updateEmployee.xml">
+
+]
+>
+
+<project name="WebTest.WebTest-projectDefinitions" basedir="." default="wt.nothing">
+
+	<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+	<target name="wt.defineMacros" description="Defines macros and project specific Steps" unless="WebTest.WebTest-projectDefinitions.macroDefined">
+		<property name="WebTest.WebTest-projectDefinitions.macroDefined" value="true"/>
+		<echo message="Defining project macros and custom steps (if any)"/>
+
+ &definitions__addDepartment__xml; 
+ &definitions__addEmployee__xml; 
+ &definitions__deleteDepartment__xml; 
+ &definitions__deleteEmployee__xml; 
+ &definitions__findDepartment__xml; 
+ &definitions__startApplication__xml; 
+ &definitions__updateDepartment__xml; 
+ &definitions__updateEmployee__xml; 
+
+	</target>
+	
+	<target name="wt.nothing">
+		
+	</target>
+
+	
+</project>

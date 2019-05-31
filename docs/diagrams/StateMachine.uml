@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Package xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_9sBr4LJaEd6HpOaEmX1mpg">
+  <elementImport xmi:id="_9snh_LJaEd6HpOaEmX1mpg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+  </elementImport>
+  <elementImport xmi:id="_9snh_bJaEd6HpOaEmX1mpg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+  </elementImport>
+  <elementImport xmi:id="_9snh_rJaEd6HpOaEmX1mpg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
+  </elementImport>
+  <elementImport xmi:id="_9snh_7JaEd6HpOaEmX1mpg">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:StateMachine" xmi:id="_EI3zgLJbEd6HpOaEmX1mpg" name="StateMachine">
+    <region xmi:id="_EJBkgLJbEd6HpOaEmX1mpg" name="Region">
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_FmwGwLJbEd6HpOaEmX1mpg"/>
+      <subvertex xmi:type="uml:FinalState" xmi:id="_HU2AQLJbEd6HpOaEmX1mpg"/>
+      <subvertex xmi:type="uml:State" xmi:id="_Ozcf0LJbEd6HpOaEmX1mpg" name="Searching Departments"/>
+      <subvertex xmi:type="uml:State" xmi:id="_hcmzULJbEd6HpOaEmX1mpg" name="Showing Departments"/>
+      <subvertex xmi:type="uml:State" xmi:id="_yvnzQLJbEd6HpOaEmX1mpg" name="Editing Department"/>
+      <subvertex xmi:type="uml:State" xmi:id="_0sl2QLJbEd6HpOaEmX1mpg" name="Updating Department"/>
+      <subvertex xmi:type="uml:State" xmi:id="_2YwdILJbEd6HpOaEmX1mpg" name="Deleting Department"/>
+      <subvertex xmi:type="uml:State" xmi:id="_83YtcLJbEd6HpOaEmX1mpg" name="Editing Employee"/>
+      <subvertex xmi:type="uml:State" xmi:id="_-Z3z4LJbEd6HpOaEmX1mpg" name="Updating Employee"/>
+      <subvertex xmi:type="uml:State" xmi:id="__7UYgLJbEd6HpOaEmX1mpg" name="Deleting Employee"/>
+      <subvertex xmi:type="uml:State" xmi:id="_BpQhALJcEd6HpOaEmX1mpg" name="Joining Departments"/>
+      <subvertex xmi:type="uml:State" xmi:id="_EKFfALJcEd6HpOaEmX1mpg" name="Adding Department"/>
+      <subvertex xmi:type="uml:State" xmi:id="_FimxILJcEd6HpOaEmX1mpg" name="Adding Employee"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_klUbQLJcEd6HpOaEmX1mpg" kind="fork"/>
+      <subvertex xmi:type="uml:State" xmi:id="_es0aALJgEd6HpOaEmX1mpg" name="Home"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_HwvqYLJhEd6HpOaEmX1mpg" kind="fork"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_RXx2ELJhEd6HpOaEmX1mpg" kind="fork"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_Vu3yILJhEd6HpOaEmX1mpg" kind="fork"/>
+    </region>
+  </packagedElement>
+</uml:Package>

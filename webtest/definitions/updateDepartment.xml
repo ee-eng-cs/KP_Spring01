@@ -1,0 +1,16 @@
+<macrodef name="updateDepartment" description="Update department">
+	<attribute name="name"/>
+
+	<sequential>
+		<verifyText description="Verifying if this is 'Department Information' page" text="Department Information:"/>
+		<verifyText text="@{name}"/>
+
+		<clickLink label="Edit Department" />
+		<verifyText text="Department:"/>
+		<verifyText text="@{name}"/>
+
+		<clickButton label="Update Department"/>
+		<verifyText text="Department Information:"/>
+		<verifyText text="@{name}"/>
+	</sequential>
+</macrodef>

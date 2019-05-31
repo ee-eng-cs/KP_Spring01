@@ -1,0 +1,77 @@
+org.springframework.context.support.GenericApplicationContext Refreshing org.springframework.context.support.GenericApplicationContext@46a55e: startup date [10:51:37]; root of context hierarchy
+kp.company.config.DbcpDataSourceFactory createDataSource(): url[jdbc:mysql://localhost:3306/kp_spring01] username[kp]
+kp.company.jdbc.SimpleJdbcCompany init():
+
+
+===============================================================================
+org.springframework.test.context.transaction.TransactionalTestExecutionListener Began transaction (1): transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@10718b7]; rollback [true]
+kp.company.jdbc.SimpleJdbcCompany getTitles():
+kp.company.jdbc.SimpleJdbcCompanyTests getTitles():
+org.springframework.test.context.transaction.TransactionalTestExecutionListener Rolled back transaction after test execution for test context [[TestContext@9fd062 testClass = SimpleJdbcCompanyTests, locations = array<String>['classpath:/kp/company/AbstractCompanyTests-context.xml', 'classpath:/kp/company/jdbc/SimpleJdbcCompanyTests-context.xml'], testInstance = kp.company.jdbc.SimpleJdbcCompanyTests@29f93b, testMethod = getTitles@AbstractCompanyTests, testException = [null]]]
+===============================================================================
+org.springframework.test.context.transaction.TransactionalTestExecutionListener Began transaction (2): transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@10718b7]; rollback [true]
+kp.company.jdbc.SimpleJdbcCompany getTitles():
+kp.company.jdbc.SimpleJdbcCompany findDepartments(): name[D-e-p-t]
+kp.company.jdbc.SimpleJdbcCompany getTitles():
+kp.company.jdbc.SimpleJdbcCompany findDepartments(): name[D-e-p-t-99]
+kp.company.jdbc.SimpleJdbcCompanyTests findDepartments():
+org.springframework.test.context.transaction.TransactionalTestExecutionListener Rolled back transaction after test execution for test context [[TestContext@9fd062 testClass = SimpleJdbcCompanyTests, locations = array<String>['classpath:/kp/company/AbstractCompanyTests-context.xml', 'classpath:/kp/company/jdbc/SimpleJdbcCompanyTests-context.xml'], testInstance = kp.company.jdbc.SimpleJdbcCompanyTests@8ca8ac, testMethod = findDepartments@AbstractCompanyTests, testException = [null]]]
+===============================================================================
+org.springframework.test.context.transaction.TransactionalTestExecutionListener Began transaction (3): transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@10718b7]; rollback [true]
+kp.company.jdbc.SimpleJdbcCompany getTitles():
+kp.company.jdbc.SimpleJdbcCompany loadDepartment(): id[1]
+kp.company.jdbc.SimpleJdbcCompany getTitles():
+kp.company.jdbc.SimpleJdbcCompany loadDepartment(): id[3]
+kp.company.jdbc.SimpleJdbcCompanyTests loadDepartment():
+org.springframework.test.context.transaction.TransactionalTestExecutionListener Rolled back transaction after test execution for test context [[TestContext@9fd062 testClass = SimpleJdbcCompanyTests, locations = array<String>['classpath:/kp/company/AbstractCompanyTests-context.xml', 'classpath:/kp/company/jdbc/SimpleJdbcCompanyTests-context.xml'], testInstance = kp.company.jdbc.SimpleJdbcCompanyTests@9e75f6, testMethod = loadDepartment@AbstractCompanyTests, testException = [null]]]
+===============================================================================
+org.springframework.test.context.transaction.TransactionalTestExecutionListener Began transaction (4): transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@10718b7]; rollback [true]
+kp.company.jdbc.SimpleJdbcCompany getTitles():
+kp.company.jdbc.SimpleJdbcCompany findDepartments(): name[D-e-p-t]
+kp.company.jdbc.SimpleJdbcCompany storeDepartment(): id[5]
+kp.company.jdbc.SimpleJdbcCompany getTitles():
+kp.company.jdbc.SimpleJdbcCompany findDepartments(): name[D-e-p-t]
+kp.company.jdbc.SimpleJdbcCompanyTests insertDepartment():
+org.springframework.test.context.transaction.TransactionalTestExecutionListener Rolled back transaction after test execution for test context [[TestContext@9fd062 testClass = SimpleJdbcCompanyTests, locations = array<String>['classpath:/kp/company/AbstractCompanyTests-context.xml', 'classpath:/kp/company/jdbc/SimpleJdbcCompanyTests-context.xml'], testInstance = kp.company.jdbc.SimpleJdbcCompanyTests@1a51312, testMethod = insertDepartment@AbstractCompanyTests, testException = [null]]]
+===============================================================================
+org.springframework.test.context.transaction.TransactionalTestExecutionListener Began transaction (5): transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@10718b7]; rollback [true]
+kp.company.jdbc.SimpleJdbcCompany getTitles():
+kp.company.jdbc.SimpleJdbcCompany loadDepartment(): id[1]
+kp.company.jdbc.SimpleJdbcCompany storeDepartment(): id[1]
+kp.company.jdbc.SimpleJdbcCompany getTitles():
+kp.company.jdbc.SimpleJdbcCompany loadDepartment(): id[1]
+kp.company.jdbc.SimpleJdbcCompanyTests updateDepartment():
+org.springframework.test.context.transaction.TransactionalTestExecutionListener Rolled back transaction after test execution for test context [[TestContext@9fd062 testClass = SimpleJdbcCompanyTests, locations = array<String>['classpath:/kp/company/AbstractCompanyTests-context.xml', 'classpath:/kp/company/jdbc/SimpleJdbcCompanyTests-context.xml'], testInstance = kp.company.jdbc.SimpleJdbcCompanyTests@e4d0cd, testMethod = updateDepartment@AbstractCompanyTests, testException = [null]]]
+===============================================================================
+org.springframework.test.context.transaction.TransactionalTestExecutionListener Began transaction (6): transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@10718b7]; rollback [true]
+kp.company.jdbc.SimpleJdbcCompany getTitles():
+kp.company.jdbc.SimpleJdbcCompany loadDepartment(): id[1]
+kp.company.jdbc.SimpleJdbcCompany loadEmployee(): id[1]
+kp.company.jdbc.SimpleJdbcCompany getTitles():
+kp.company.jdbc.SimpleJdbcCompany loadDepartment(): id[3]
+kp.company.jdbc.SimpleJdbcCompany loadEmployee(): id[9]
+kp.company.jdbc.SimpleJdbcCompanyTests loadEmployee():
+org.springframework.test.context.transaction.TransactionalTestExecutionListener Rolled back transaction after test execution for test context [[TestContext@9fd062 testClass = SimpleJdbcCompanyTests, locations = array<String>['classpath:/kp/company/AbstractCompanyTests-context.xml', 'classpath:/kp/company/jdbc/SimpleJdbcCompanyTests-context.xml'], testInstance = kp.company.jdbc.SimpleJdbcCompanyTests@4ec59, testMethod = loadEmployee@AbstractCompanyTests, testException = [null]]]
+===============================================================================
+org.springframework.test.context.transaction.TransactionalTestExecutionListener Began transaction (7): transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@10718b7]; rollback [true]
+kp.company.jdbc.SimpleJdbcCompany getTitles():
+kp.company.jdbc.SimpleJdbcCompany loadDepartment(): id[1]
+kp.company.jdbc.SimpleJdbcCompany getTitles():
+kp.company.jdbc.SimpleJdbcCompany storeEmployee(): id[11]
+kp.company.jdbc.SimpleJdbcCompany storeDepartment(): id[1]
+kp.company.jdbc.SimpleJdbcCompany getTitles():
+kp.company.jdbc.SimpleJdbcCompany loadDepartment(): id[1]
+kp.company.jdbc.SimpleJdbcCompanyTests insertEmployee():
+org.springframework.test.context.transaction.TransactionalTestExecutionListener Rolled back transaction after test execution for test context [[TestContext@9fd062 testClass = SimpleJdbcCompanyTests, locations = array<String>['classpath:/kp/company/AbstractCompanyTests-context.xml', 'classpath:/kp/company/jdbc/SimpleJdbcCompanyTests-context.xml'], testInstance = kp.company.jdbc.SimpleJdbcCompanyTests@4ce427, testMethod = insertEmployee@AbstractCompanyTests, testException = [null]]]
+===============================================================================
+org.springframework.test.context.transaction.TransactionalTestExecutionListener Began transaction (8): transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@10718b7]; rollback [true]
+kp.company.jdbc.SimpleJdbcCompany getTitles():
+kp.company.jdbc.SimpleJdbcCompany loadDepartment(): id[1]
+kp.company.jdbc.SimpleJdbcCompany loadEmployee(): id[1]
+kp.company.jdbc.SimpleJdbcCompany storeEmployee(): id[1]
+kp.company.jdbc.SimpleJdbcCompany getTitles():
+kp.company.jdbc.SimpleJdbcCompany loadDepartment(): id[1]
+kp.company.jdbc.SimpleJdbcCompany loadEmployee(): id[1]
+kp.company.jdbc.SimpleJdbcCompanyTests updateEmployee():
+org.springframework.test.context.transaction.TransactionalTestExecutionListener Rolled back transaction after test execution for test context [[TestContext@9fd062 testClass = SimpleJdbcCompanyTests, locations = array<String>['classpath:/kp/company/AbstractCompanyTests-context.xml', 'classpath:/kp/company/jdbc/SimpleJdbcCompanyTests-context.xml'], testInstance = kp.company.jdbc.SimpleJdbcCompanyTests@60e390, testMethod = updateEmployee@AbstractCompanyTests, testException = [null]]]
+===============================================================================

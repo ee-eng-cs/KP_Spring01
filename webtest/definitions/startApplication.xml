@@ -1,0 +1,6 @@
+<macrodef name="startApplication" description="Start application KP Spring01">
+	<sequential>
+		<invoke description="getting Welcome page" url="/"/>
+		<verifyText description="" text="Welcome"/>
+	</sequential>
+</macrodef>

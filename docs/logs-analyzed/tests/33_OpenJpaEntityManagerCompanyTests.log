@@ -1,0 +1,73 @@
+org.springframework.context.support.GenericApplicationContext Refreshing org.springframework.context.support.GenericApplicationContext@1c68e73: startup date [10:51:42]; root of context hierarchy
+kp.company.config.DbcpDataSourceFactory createDataSource(): url[jdbc:mysql://localhost:3306/kp_spring01] username[kp]
+org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Building JPA container EntityManagerFactory for persistence unit 'kp_spring01'
+===============================================================================
+kp.company.jpa.OpenJpaEntityManagerCompanyTests Began transaction (1): transaction manager [org.springframework.orm.jpa.JpaTransactionManager@181d405]; rollback [true].
+kp.company.jpa.OpenJpaEntityManagerCompanyTests No method-level @Rollback override: using default rollback [true] for test [testBogusJpql].
+kp.company.jpa.OpenJpaEntityManagerCompanyTests Rolled back transaction after execution of test [testBogusJpql].
+===============================================================================
+kp.company.jpa.OpenJpaEntityManagerCompanyTests Began transaction (1): transaction manager [org.springframework.orm.jpa.JpaTransactionManager@181d405]; rollback [true].
+kp.company.jpa.OpenJpaEntityManagerCompanyTests testApplicationManaged():
+kp.company.jpa.OpenJpaEntityManagerCompanyTests No method-level @Rollback override: using default rollback [true] for test [testApplicationManaged].
+kp.company.jpa.OpenJpaEntityManagerCompanyTests Rolled back transaction after execution of test [testApplicationManaged].
+===============================================================================
+kp.company.jpa.OpenJpaEntityManagerCompanyTests Began transaction (1): transaction manager [org.springframework.orm.jpa.JpaTransactionManager@181d405]; rollback [true].
+kp.company.jpa.EntityManagerCompany getTitles():
+kp.company.jpa.OpenJpaEntityManagerCompanyTests testGetTitles():
+kp.company.jpa.OpenJpaEntityManagerCompanyTests No method-level @Rollback override: using default rollback [true] for test [testGetTitles].
+kp.company.jpa.OpenJpaEntityManagerCompanyTests Rolled back transaction after execution of test [testGetTitles].
+===============================================================================
+kp.company.jpa.OpenJpaEntityManagerCompanyTests Began transaction (1): transaction manager [org.springframework.orm.jpa.JpaTransactionManager@181d405]; rollback [true].
+kp.company.jpa.EntityManagerCompany findDepartments(): name[D-e-p-t]
+kp.company.jpa.EntityManagerCompany findDepartments(): name[D-e-p-t-99]
+kp.company.jpa.OpenJpaEntityManagerCompanyTests testFindDepartments():
+kp.company.jpa.OpenJpaEntityManagerCompanyTests No method-level @Rollback override: using default rollback [true] for test [testFindDepartments].
+kp.company.jpa.OpenJpaEntityManagerCompanyTests Rolled back transaction after execution of test [testFindDepartments].
+===============================================================================
+kp.company.jpa.OpenJpaEntityManagerCompanyTests Began transaction (1): transaction manager [org.springframework.orm.jpa.JpaTransactionManager@181d405]; rollback [true].
+kp.company.jpa.EntityManagerCompany loadDepartment(): id[1]
+kp.company.jpa.EntityManagerCompany loadDepartment(): id[3]
+kp.company.jpa.OpenJpaEntityManagerCompanyTests No method-level @Rollback override: using default rollback [true] for test [testLoadDepartment].
+kp.company.jpa.OpenJpaEntityManagerCompanyTests Rolled back transaction after execution of test [testLoadDepartment].
+kp.company.jpa.OpenJpaEntityManagerCompanyTests testLoadDepartment():
+===============================================================================
+kp.company.jpa.OpenJpaEntityManagerCompanyTests Began transaction (1): transaction manager [org.springframework.orm.jpa.JpaTransactionManager@181d405]; rollback [true].
+kp.company.jpa.EntityManagerCompany findDepartments(): name[D-e-p-t]
+kp.company.jpa.EntityManagerCompany storeDepartment(): id[8]
+kp.company.jpa.EntityManagerCompany findDepartments(): name[D-e-p-t]
+kp.company.jpa.OpenJpaEntityManagerCompanyTests testInsertDepartment():
+kp.company.jpa.OpenJpaEntityManagerCompanyTests No method-level @Rollback override: using default rollback [true] for test [testInsertDepartment].
+kp.company.jpa.OpenJpaEntityManagerCompanyTests Rolled back transaction after execution of test [testInsertDepartment].
+===============================================================================
+kp.company.jpa.OpenJpaEntityManagerCompanyTests Began transaction (1): transaction manager [org.springframework.orm.jpa.JpaTransactionManager@181d405]; rollback [true].
+kp.company.jpa.EntityManagerCompany loadDepartment(): id[1]
+kp.company.jpa.EntityManagerCompany storeDepartment(): id[1]
+kp.company.jpa.EntityManagerCompany loadDepartment(): id[1]
+kp.company.jpa.OpenJpaEntityManagerCompanyTests testUpdateDepartment():
+kp.company.jpa.OpenJpaEntityManagerCompanyTests No method-level @Rollback override: using default rollback [true] for test [testUpdateDepartment].
+kp.company.jpa.OpenJpaEntityManagerCompanyTests Rolled back transaction after execution of test [testUpdateDepartment].
+===============================================================================
+kp.company.jpa.OpenJpaEntityManagerCompanyTests Began transaction (1): transaction manager [org.springframework.orm.jpa.JpaTransactionManager@181d405]; rollback [true].
+kp.company.jpa.EntityManagerCompany loadEmployee(): id[1]
+kp.company.jpa.EntityManagerCompany loadEmployee(): id[9]
+kp.company.jpa.OpenJpaEntityManagerCompanyTests testLoadEmployee():
+kp.company.jpa.OpenJpaEntityManagerCompanyTests No method-level @Rollback override: using default rollback [true] for test [testLoadEmployee].
+kp.company.jpa.OpenJpaEntityManagerCompanyTests Rolled back transaction after execution of test [testLoadEmployee].
+===============================================================================
+kp.company.jpa.OpenJpaEntityManagerCompanyTests Began transaction (1): transaction manager [org.springframework.orm.jpa.JpaTransactionManager@181d405]; rollback [true].
+kp.company.jpa.EntityManagerCompany loadDepartment(): id[1]
+kp.company.jpa.EntityManagerCompany getTitles():
+kp.company.jpa.EntityManagerCompany storeDepartment(): id[1]
+kp.company.jpa.EntityManagerCompany loadDepartment(): id[1]
+kp.company.jpa.OpenJpaEntityManagerCompanyTests testInsertEmployee():
+kp.company.jpa.OpenJpaEntityManagerCompanyTests No method-level @Rollback override: using default rollback [true] for test [testInsertEmployee].
+kp.company.jpa.OpenJpaEntityManagerCompanyTests Rolled back transaction after execution of test [testInsertEmployee].
+===============================================================================
+kp.company.jpa.OpenJpaEntityManagerCompanyTests Began transaction (1): transaction manager [org.springframework.orm.jpa.JpaTransactionManager@181d405]; rollback [true].
+kp.company.jpa.EntityManagerCompany loadEmployee(): id[1]
+kp.company.jpa.EntityManagerCompany storeEmployee(): id[1]
+kp.company.jpa.EntityManagerCompany loadEmployee(): id[1]
+kp.company.jpa.OpenJpaEntityManagerCompanyTests testUpdateEmployee():
+kp.company.jpa.OpenJpaEntityManagerCompanyTests No method-level @Rollback override: using default rollback [true] for test [testUpdateEmployee].
+kp.company.jpa.OpenJpaEntityManagerCompanyTests Rolled back transaction after execution of test [testUpdateEmployee].
+===============================================================================

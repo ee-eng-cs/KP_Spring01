@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<clay-model clay-version="2.0.0">
+<database-model author="" begin-script="" end-script="" id="148d4ef:124059c6e0e:-8000" name="dbModel" sql-dialect-id="jp.azzurri.clay.dialect.MySQL_5_0_Dialect" version="1.0">
+<schema-list>
+<schema id="148d4ef:124059c6e0e:-7ff0" name="kp_spring01">
+<table-list>
+<table alias="Employees" id="148d4ef:124059c6e0e:-7fee" name="employees">
+<column-list>
+<column alias="Id" auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="148d4ef:124059c6e0e:-7fdc" mandatory="true" name="id">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER UNSIGNED"/>
+</column>
+<column alias="First Name" auto-increment="false" column-size="30" decimal-digits="0" default-value="" id="148d4ef:124059c6e0e:-7fdb" mandatory="false" name="first_name">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column alias="Last Name" auto-increment="false" column-size="30" decimal-digits="0" default-value="" id="148d4ef:124059c6e0e:-7fda" mandatory="false" name="last_name">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+<column alias="Department Id" auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="148d4ef:124059c6e0e:-7fd5" mandatory="true" name="department_id">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER UNSIGNED"/>
+</column>
+<column alias="Title Id" auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="148d4ef:124059c6e0e:-7fd4" mandatory="true" name="title_id">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER UNSIGNED"/>
+</column>
+</column-list>
+<primary-key id="148d4ef:124059c6e0e:-7fed" name="PK_EMPLOYEES">
+<primary-key-column name="id"/>
+</primary-key>
+<foreign-key-list>
+<foreign-key id="148d4ef:124059c6e0e:-7e2d" name="fk_employees_departments" on-delete="UNSPECIFIED" on-update="UNSPECIFIED" referenced-key="PK_DEPARTMENTS" referenced-table="departments" referenced-table-schema="kp_spring01" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="">
+<foreign-key-column column-name="department_id" referenced-key-column-name="id"/>
+</foreign-key>
+<foreign-key id="148d4ef:124059c6e0e:-7df5" name="fk_employees_titles" on-delete="UNSPECIFIED" on-update="UNSPECIFIED" referenced-key="PK_TITLES" referenced-table="titles" referenced-table-schema="kp_spring01" source-entity-role="" source-multiplicity="0..*" source-relationship-type="" target-entity-role="" target-multiplicity="1" target-relationship-type="">
+<foreign-key-column column-name="title_id" referenced-key-column-name="id"/>
+</foreign-key>
+</foreign-key-list>
+</table>
+<table alias="Departments" id="148d4ef:124059c6e0e:-7fec" name="departments">
+<column-list>
+<column alias="Id" auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="148d4ef:124059c6e0e:-7fe6" mandatory="true" name="id">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER UNSIGNED"/>
+</column>
+<column alias="Name" auto-increment="false" column-size="30" decimal-digits="0" default-value="" id="148d4ef:124059c6e0e:-7fe5" mandatory="false" name="name">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+</column-list>
+<primary-key id="148d4ef:124059c6e0e:-7feb" name="PK_DEPARTMENTS">
+<primary-key-column name="id"/>
+</primary-key>
+</table>
+<table alias="Titles" id="148d4ef:124059c6e0e:-7fea" name="titles">
+<column-list>
+<column alias="Id" auto-increment="false" column-size="0" decimal-digits="0" default-value="" id="148d4ef:124059c6e0e:-7fe2" mandatory="true" name="id">
+<data-type name="INTEGER" selected-variant-pattern="INTEGER UNSIGNED"/>
+</column>
+<column alias="Name" auto-increment="false" column-size="30" decimal-digits="0" default-value="" id="148d4ef:124059c6e0e:-7fe1" mandatory="false" name="name">
+<data-type name="VARCHAR" selected-variant-pattern="VARCHAR(%n)"/>
+</column>
+</column-list>
+<primary-key id="148d4ef:124059c6e0e:-7fe9" name="PK_TITLES">
+<primary-key-column name="id"/>
+</primary-key>
+</table>
+</table-list>
+</schema>
+</schema-list>
+</database-model>
+<diagram>
+<table-figure height="173" refid="148d4ef:124059c6e0e:-7fee" width="200" x="352" y="85"/>
+<table-figure refid="148d4ef:124059c6e0e:-7fec" x="46" y="89"/>
+<table-figure refid="148d4ef:124059c6e0e:-7fea" x="47" y="149"/>
+</diagram>
+</clay-model>

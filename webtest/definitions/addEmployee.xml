@@ -1,0 +1,23 @@
+<macrodef name="addEmployee" description="Add new employee to the department">
+	<attribute name="name"/>
+	<attribute name="firstName"/>
+	<attribute name="lastName"/>
+	<attribute name="title"/>
+
+	<sequential>
+		<verifyText description="Verifying if this is 'Department Information' page" text="Department Information:"/>
+		<verifyText text="@{name}"/>
+
+		<clickLink label="Add Employee"/>
+		<verifyText text="New Employee:"/>
+
+		<setInputField name="firstName" value="@{firstName}"/>
+		<setInputField name="lastName" value="@{lastName}"/>
+		<setSelectField name="title" text="@{title}"/>
+		<clickButton label="Add Employee"/>
+		<verifyText text="Department Information:"/>
+		<verifyText text="@{firstName}"/>
+		<verifyText text="@{lastName}"/>
+		<verifyText text="@{title}"/>
+	</sequential>
+</macrodef>

@@ -1,0 +1,77 @@
+org.springframework.context.support.GenericApplicationContext Refreshing org.springframework.context.support.GenericApplicationContext@18a49e0: startup date [10:51:36]; root of context hierarchy
+kp.company.config.DbcpDataSourceFactory createDataSource(): url[jdbc:mysql://localhost:3306/kp_spring01] username[kp]
+org.springframework.orm.hibernate3.LocalSessionFactoryBean Building new Hibernate SessionFactory
+kp.company.hibernate.HibernateCompany HibernateCompany():
+org.springframework.orm.hibernate3.HibernateTransactionManager Using DataSource [org.apache.commons.dbcp.BasicDataSource@1ed1dbe] of Hibernate SessionFactory for HibernateTransactionManager
+===============================================================================
+org.springframework.test.context.transaction.TransactionalTestExecutionListener Began transaction (1): transaction manager [org.springframework.orm.hibernate3.HibernateTransactionManager@39da8a]; rollback [true]
+kp.company.hibernate.HibernateCompany getTitles():
+kp.company.hibernate.HibernateCompanyTests getTitles():
+org.springframework.test.context.transaction.TransactionalTestExecutionListener Rolled back transaction after test execution for test context [[TestContext@c87621 testClass = HibernateCompanyTests, locations = array<String>['classpath:/kp/company/AbstractCompanyTests-context.xml', 'classpath:/kp/company/hibernate/HibernateCompanyTests-context.xml'], testInstance = kp.company.hibernate.HibernateCompanyTests@c38157, testMethod = getTitles@AbstractCompanyTests, testException = [null]]]
+===============================================================================
+org.springframework.test.context.transaction.TransactionalTestExecutionListener Began transaction (2): transaction manager [org.springframework.orm.hibernate3.HibernateTransactionManager@39da8a]; rollback [true]
+
+kp.company.hibernate.HibernateCompany findDepartments(): name[D-e-p-t]
+
+kp.company.hibernate.HibernateCompany findDepartments(): name[D-e-p-t-99]
+kp.company.hibernate.HibernateCompanyTests findDepartments():
+org.springframework.test.context.transaction.TransactionalTestExecutionListener Rolled back transaction after test execution for test context [[TestContext@c87621 testClass = HibernateCompanyTests, locations = array<String>['classpath:/kp/company/AbstractCompanyTests-context.xml', 'classpath:/kp/company/hibernate/HibernateCompanyTests-context.xml'], testInstance = kp.company.hibernate.HibernateCompanyTests@1757337, testMethod = findDepartments@AbstractCompanyTests, testException = [null]]]
+===============================================================================
+org.springframework.test.context.transaction.TransactionalTestExecutionListener Began transaction (3): transaction manager [org.springframework.orm.hibernate3.HibernateTransactionManager@39da8a]; rollback [true]
+
+kp.company.hibernate.HibernateCompany loadDepartment(): id[1]
+
+kp.company.hibernate.HibernateCompany loadDepartment(): id[3]
+kp.company.hibernate.HibernateCompanyTests loadDepartment():
+org.springframework.test.context.transaction.TransactionalTestExecutionListener Rolled back transaction after test execution for test context [[TestContext@c87621 testClass = HibernateCompanyTests, locations = array<String>['classpath:/kp/company/AbstractCompanyTests-context.xml', 'classpath:/kp/company/hibernate/HibernateCompanyTests-context.xml'], testInstance = kp.company.hibernate.HibernateCompanyTests@1a7c484, testMethod = loadDepartment@AbstractCompanyTests, testException = [null]]]
+===============================================================================
+org.springframework.test.context.transaction.TransactionalTestExecutionListener Began transaction (4): transaction manager [org.springframework.orm.hibernate3.HibernateTransactionManager@39da8a]; rollback [true]
+
+kp.company.hibernate.HibernateCompany findDepartments(): name[D-e-p-t]
+kp.company.hibernate.HibernateCompany storeDepartment(): id[4]
+
+kp.company.hibernate.HibernateCompany findDepartments(): name[D-e-p-t]
+kp.company.hibernate.HibernateCompanyTests insertDepartment():
+org.springframework.test.context.transaction.TransactionalTestExecutionListener Rolled back transaction after test execution for test context [[TestContext@c87621 testClass = HibernateCompanyTests, locations = array<String>['classpath:/kp/company/AbstractCompanyTests-context.xml', 'classpath:/kp/company/hibernate/HibernateCompanyTests-context.xml'], testInstance = kp.company.hibernate.HibernateCompanyTests@1a93f38, testMethod = insertDepartment@AbstractCompanyTests, testException = [null]]]
+===============================================================================
+org.springframework.test.context.transaction.TransactionalTestExecutionListener Began transaction (5): transaction manager [org.springframework.orm.hibernate3.HibernateTransactionManager@39da8a]; rollback [true]
+
+kp.company.hibernate.HibernateCompany loadDepartment(): id[1]
+kp.company.hibernate.HibernateCompany storeDepartment(): id[1]
+
+kp.company.hibernate.HibernateCompany loadDepartment(): id[1]
+kp.company.hibernate.HibernateCompanyTests updateDepartment():
+org.springframework.test.context.transaction.TransactionalTestExecutionListener Rolled back transaction after test execution for test context [[TestContext@c87621 testClass = HibernateCompanyTests, locations = array<String>['classpath:/kp/company/AbstractCompanyTests-context.xml', 'classpath:/kp/company/hibernate/HibernateCompanyTests-context.xml'], testInstance = kp.company.hibernate.HibernateCompanyTests@294f62, testMethod = updateDepartment@AbstractCompanyTests, testException = [null]]]
+===============================================================================
+org.springframework.test.context.transaction.TransactionalTestExecutionListener Began transaction (6): transaction manager [org.springframework.orm.hibernate3.HibernateTransactionManager@39da8a]; rollback [true]
+
+
+kp.company.hibernate.HibernateCompany loadEmployee(): id[1]
+
+
+kp.company.hibernate.HibernateCompany loadEmployee(): id[9]
+kp.company.hibernate.HibernateCompanyTests loadEmployee():
+org.springframework.test.context.transaction.TransactionalTestExecutionListener Rolled back transaction after test execution for test context [[TestContext@c87621 testClass = HibernateCompanyTests, locations = array<String>['classpath:/kp/company/AbstractCompanyTests-context.xml', 'classpath:/kp/company/hibernate/HibernateCompanyTests-context.xml'], testInstance = kp.company.hibernate.HibernateCompanyTests@1abbec4, testMethod = loadEmployee@AbstractCompanyTests, testException = [null]]]
+===============================================================================
+org.springframework.test.context.transaction.TransactionalTestExecutionListener Began transaction (7): transaction manager [org.springframework.orm.hibernate3.HibernateTransactionManager@39da8a]; rollback [true]
+
+kp.company.hibernate.HibernateCompany loadDepartment(): id[1]
+kp.company.hibernate.HibernateCompany getTitles():
+kp.company.hibernate.HibernateCompany storeEmployee(): id[10]
+kp.company.hibernate.HibernateCompany storeDepartment(): id[1]
+
+kp.company.hibernate.HibernateCompany loadDepartment(): id[1]
+kp.company.hibernate.HibernateCompanyTests insertEmployee():
+org.springframework.test.context.transaction.TransactionalTestExecutionListener Rolled back transaction after test execution for test context [[TestContext@c87621 testClass = HibernateCompanyTests, locations = array<String>['classpath:/kp/company/AbstractCompanyTests-context.xml', 'classpath:/kp/company/hibernate/HibernateCompanyTests-context.xml'], testInstance = kp.company.hibernate.HibernateCompanyTests@1ef4b2b, testMethod = insertEmployee@AbstractCompanyTests, testException = [null]]]
+===============================================================================
+org.springframework.test.context.transaction.TransactionalTestExecutionListener Began transaction (8): transaction manager [org.springframework.orm.hibernate3.HibernateTransactionManager@39da8a]; rollback [true]
+
+
+kp.company.hibernate.HibernateCompany loadEmployee(): id[1]
+kp.company.hibernate.HibernateCompany storeEmployee(): id[1]
+
+
+kp.company.hibernate.HibernateCompany loadEmployee(): id[1]
+kp.company.hibernate.HibernateCompanyTests updateEmployee():
+org.springframework.test.context.transaction.TransactionalTestExecutionListener Rolled back transaction after test execution for test context [[TestContext@c87621 testClass = HibernateCompanyTests, locations = array<String>['classpath:/kp/company/AbstractCompanyTests-context.xml', 'classpath:/kp/company/hibernate/HibernateCompanyTests-context.xml'], testInstance = kp.company.hibernate.HibernateCompanyTests@229ed4, testMethod = updateEmployee@AbstractCompanyTests, testException = [null]]]
+===============================================================================

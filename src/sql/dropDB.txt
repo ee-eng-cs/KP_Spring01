@@ -1,0 +1,1 @@
+DROP DATABASE kp_spring01;

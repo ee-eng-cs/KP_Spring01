@@ -1,0 +1,151 @@
+INFO kp.company.web.FindDepartmentsForm setupForm(): viewName[departments/search]
+DEBUG kp.company.web.CompanyBindingInitializer initBinder():
+DEBUG kp.company.web.FindDepartmentsForm setAllowedFields():
+DEBUG kp.company.web.CompanyBindingInitializer initBinder():
+DEBUG kp.company.web.FindDepartmentsForm setAllowedFields():
+DEBUG org.springframework.orm.hibernate3.HibernateTransactionManager Creating new transaction with name [kp.company.Company.findDepartments]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+DEBUG org.hibernate.impl.SessionImpl opened session at timestamp: 12547482334
+DEBUG org.springframework.orm.hibernate3.HibernateTransactionManager Opened new Session [org.hibernate.impl.SessionImpl@1dea382] for Hibernate transaction
+DEBUG org.springframework.orm.hibernate3.HibernateTransactionManager Preparing JDBC Connection of Hibernate Session [org.hibernate.impl.SessionImpl@1dea382]
+DEBUG org.hibernate.jdbc.ConnectionManager opening JDBC connection
+DEBUG org.hibernate.transaction.JDBCTransaction begin
+DEBUG org.hibernate.transaction.JDBCTransaction current autocommit status: true
+DEBUG org.hibernate.transaction.JDBCTransaction disabling autocommit
+DEBUG org.springframework.orm.hibernate3.HibernateTransactionManager Exposing Hibernate transaction as JDBC transaction [jdbc:mysql://localhost:3306/kp_spring01, UserName=kp@localhost, MySQL-AB JDBC Driver]
+DEBUG org.hibernate.hql.ast.QueryTranslatorImpl parse() - HQL: from kp.company.Department department where department.name like :name
+DEBUG org.hibernate.hql.ast.AST --- HQL AST ---
+ \-[QUERY] 'query'
+    +-[SELECT_FROM] 'SELECT_FROM'
+    |  \-[FROM] 'from'
+    |     \-[RANGE] 'RANGE'
+    |        +-[DOT] '.'
+    |        |  +-[DOT] '.'
+    |        |  |  +-[IDENT] 'kp'
+    |        |  |  \-[IDENT] 'company'
+    |        |  \-[IDENT] 'Department'
+    |        \-[ALIAS] 'department'
+    \-[WHERE] 'where'
+       \-[LIKE] 'like'
+          +-[DOT] '.'
+          |  +-[IDENT] 'department'
+          |  \-[IDENT] 'name'
+          \-[COLON] ':'
+             \-[IDENT] 'name'
+
+DEBUG org.hibernate.hql.ast.ErrorCounter throwQueryException() : no errors
+DEBUG org.hibernate.hql.antlr.HqlSqlBaseWalker select << begin [level=1, statement=select]
+DEBUG org.hibernate.hql.ast.tree.FromElement FromClause{level=1} :  kp.company.Department (department) -> department0_
+DEBUG org.hibernate.hql.ast.tree.FromReferenceNode Resolved :  department -> department0_.id
+DEBUG org.hibernate.hql.ast.tree.DotNode getDataType() : name -> org.hibernate.type.StringType@ca9a2d
+DEBUG org.hibernate.hql.ast.tree.FromReferenceNode Resolved :  department.name -> department0_.name
+DEBUG org.hibernate.hql.antlr.HqlSqlBaseWalker select : finishing up [level=1, statement=select]
+DEBUG org.hibernate.hql.ast.HqlSqlWalker processQuery() :  ( SELECT ( FromClause{level=1} departments department0_ ) ( where ( like ( department0_.name department0_.id name ) ? ) ) )
+DEBUG org.hibernate.hql.ast.HqlSqlWalker Derived SELECT clause created.
+DEBUG org.hibernate.hql.ast.util.JoinProcessor Using FROM fragment [departments department0_]
+DEBUG org.hibernate.hql.antlr.HqlSqlBaseWalker select >> end [level=1, statement=select]
+DEBUG org.hibernate.hql.ast.AST --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (departments)
+    +-[SELECT_CLAUSE] SelectClause: '{derived select clause}'
+    |  +-[SELECT_EXPR] SelectExpressionImpl: 'department0_.id as id0_'
+    |  \-[SQL_TOKEN] SqlFragment: 'department0_.name as name0_'
+    +-[FROM] FromClause: 'from' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[department], fromElementByTableAlias=[department0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+    |  \-[FROM_FRAGMENT] FromElement: 'departments department0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=department,role=null,tableName=departments,tableAlias=department0_,origin=null,colums={,className=kp.company.Department}}
+    \-[WHERE] SqlNode: 'where'
+       \-[LIKE] BinaryLogicOperatorNode: 'like'
+          +-[DOT] DotNode: 'department0_.name'
+          |  +-[ALIAS_REF] IdentNode: 'department0_.id'
+          |  \-[IDENT] IdentNode: 'name'
+          \-[NAMED_PARAM] ParameterNode: '?' {name=name, expectedType=org.hibernate.type.StringType@ca9a2d}
+
+DEBUG org.hibernate.hql.ast.ErrorCounter throwQueryException() : no errors
+DEBUG org.hibernate.hql.ast.QueryTranslatorImpl HQL: from kp.company.Department department where department.name like :name
+DEBUG org.hibernate.hql.ast.QueryTranslatorImpl SQL: select department0_.id as id0_, department0_.name as name0_ from departments department0_ where department0_.name like ?
+DEBUG org.hibernate.hql.ast.ErrorCounter throwQueryException() : no errors
+DEBUG org.hibernate.jdbc.AbstractBatcher about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+DEBUG org.hibernate.SQL select department0_.id as id0_, department0_.name as name0_ from departments department0_ where department0_.name like ?
+DEBUG org.hibernate.jdbc.AbstractBatcher about to open ResultSet (open ResultSets: 0, globally: 0)
+DEBUG org.hibernate.loader.Loader result row: EntityKey[kp.company.Department#1]
+DEBUG org.hibernate.loader.Loader result row: EntityKey[kp.company.Department#3]
+DEBUG org.hibernate.jdbc.AbstractBatcher about to close ResultSet (open ResultSets: 1, globally: 1)
+DEBUG org.hibernate.jdbc.AbstractBatcher about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+DEBUG org.hibernate.engine.TwoPhaseLoad resolving associations for [kp.company.Department#1]
+DEBUG org.hibernate.engine.TwoPhaseLoad done materializing entity [kp.company.Department#1]
+DEBUG org.hibernate.engine.TwoPhaseLoad resolving associations for [kp.company.Department#3]
+DEBUG org.hibernate.engine.TwoPhaseLoad done materializing entity [kp.company.Department#3]
+DEBUG org.hibernate.engine.StatefulPersistenceContext initializing non-lazy collections
+DEBUG org.hibernate.loader.Loader loading collection: [kp.company.Department.employeesInternal#3]
+DEBUG org.hibernate.jdbc.AbstractBatcher about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+DEBUG org.hibernate.SQL select employeesi0_.department_id as department4_2_, employeesi0_.id as id2_, employeesi0_.id as id1_1_, employeesi0_.first_name as first2_1_1_, employeesi0_.last_name as last3_1_1_, employeesi0_.department_id as department4_1_1_, employeesi0_.title_id as title5_1_1_, title1_.id as id2_0_, title1_.name as name2_0_ from employees employeesi0_ left outer join titles title1_ on employeesi0_.title_id=title1_.id where employeesi0_.department_id=?
+DEBUG org.hibernate.jdbc.AbstractBatcher about to open ResultSet (open ResultSets: 0, globally: 0)
+DEBUG org.hibernate.loader.Loader result set contains (possibly empty) collection: [kp.company.Department.employeesInternal#3]
+DEBUG org.hibernate.loader.Loader result row: EntityKey[kp.company.Title#1], EntityKey[kp.company.Employee#7]
+DEBUG org.hibernate.loader.Loader found row of collection: [kp.company.Department.employeesInternal#3]
+DEBUG org.hibernate.loader.Loader result row: EntityKey[kp.company.Title#2], EntityKey[kp.company.Employee#8]
+DEBUG org.hibernate.loader.Loader found row of collection: [kp.company.Department.employeesInternal#3]
+DEBUG org.hibernate.loader.Loader result row: EntityKey[kp.company.Title#3], EntityKey[kp.company.Employee#9]
+DEBUG org.hibernate.loader.Loader found row of collection: [kp.company.Department.employeesInternal#3]
+DEBUG org.hibernate.jdbc.AbstractBatcher about to close ResultSet (open ResultSets: 1, globally: 1)
+DEBUG org.hibernate.jdbc.AbstractBatcher about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+DEBUG org.hibernate.engine.TwoPhaseLoad resolving associations for [kp.company.Title#1]
+DEBUG org.hibernate.engine.TwoPhaseLoad done materializing entity [kp.company.Title#1]
+DEBUG org.hibernate.engine.TwoPhaseLoad resolving associations for [kp.company.Employee#7]
+DEBUG org.hibernate.engine.TwoPhaseLoad done materializing entity [kp.company.Employee#7]
+DEBUG org.hibernate.engine.TwoPhaseLoad resolving associations for [kp.company.Title#2]
+DEBUG org.hibernate.engine.TwoPhaseLoad done materializing entity [kp.company.Title#2]
+DEBUG org.hibernate.engine.TwoPhaseLoad resolving associations for [kp.company.Employee#8]
+DEBUG org.hibernate.engine.TwoPhaseLoad done materializing entity [kp.company.Employee#8]
+DEBUG org.hibernate.engine.TwoPhaseLoad resolving associations for [kp.company.Title#3]
+DEBUG org.hibernate.engine.TwoPhaseLoad done materializing entity [kp.company.Title#3]
+DEBUG org.hibernate.engine.TwoPhaseLoad resolving associations for [kp.company.Employee#9]
+DEBUG org.hibernate.engine.TwoPhaseLoad done materializing entity [kp.company.Employee#9]
+DEBUG org.hibernate.engine.loading.CollectionLoadContext 1 collections were found in result set for role: kp.company.Department.employeesInternal
+DEBUG org.hibernate.engine.loading.CollectionLoadContext collection fully initialized: [kp.company.Department.employeesInternal#3]
+DEBUG org.hibernate.engine.loading.CollectionLoadContext 1 collections initialized for role: kp.company.Department.employeesInternal
+DEBUG org.hibernate.loader.Loader done loading collection
+DEBUG org.hibernate.loader.Loader loading collection: [kp.company.Department.employeesInternal#1]
+DEBUG org.hibernate.jdbc.AbstractBatcher about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+DEBUG org.hibernate.SQL select employeesi0_.department_id as department4_2_, employeesi0_.id as id2_, employeesi0_.id as id1_1_, employeesi0_.first_name as first2_1_1_, employeesi0_.last_name as last3_1_1_, employeesi0_.department_id as department4_1_1_, employeesi0_.title_id as title5_1_1_, title1_.id as id2_0_, title1_.name as name2_0_ from employees employeesi0_ left outer join titles title1_ on employeesi0_.title_id=title1_.id where employeesi0_.department_id=?
+DEBUG org.hibernate.jdbc.AbstractBatcher about to open ResultSet (open ResultSets: 0, globally: 0)
+DEBUG org.hibernate.loader.Loader result set contains (possibly empty) collection: [kp.company.Department.employeesInternal#1]
+DEBUG org.hibernate.loader.Loader result row: EntityKey[kp.company.Title#1], EntityKey[kp.company.Employee#1]
+DEBUG org.hibernate.loader.Loader found row of collection: [kp.company.Department.employeesInternal#1]
+DEBUG org.hibernate.loader.Loader result row: EntityKey[kp.company.Title#2], EntityKey[kp.company.Employee#2]
+DEBUG org.hibernate.loader.Loader found row of collection: [kp.company.Department.employeesInternal#1]
+DEBUG org.hibernate.loader.Loader result row: EntityKey[kp.company.Title#3], EntityKey[kp.company.Employee#3]
+DEBUG org.hibernate.loader.Loader found row of collection: [kp.company.Department.employeesInternal#1]
+DEBUG org.hibernate.loader.Loader result row: EntityKey[kp.company.Title#1], EntityKey[kp.company.Employee#10]
+DEBUG org.hibernate.loader.Loader found row of collection: [kp.company.Department.employeesInternal#1]
+DEBUG org.hibernate.loader.Loader result row: EntityKey[kp.company.Title#2], EntityKey[kp.company.Employee#11]
+DEBUG org.hibernate.loader.Loader found row of collection: [kp.company.Department.employeesInternal#1]
+DEBUG org.hibernate.loader.Loader result row: EntityKey[kp.company.Title#3], EntityKey[kp.company.Employee#12]
+DEBUG org.hibernate.loader.Loader found row of collection: [kp.company.Department.employeesInternal#1]
+DEBUG org.hibernate.jdbc.AbstractBatcher about to close ResultSet (open ResultSets: 1, globally: 1)
+DEBUG org.hibernate.jdbc.AbstractBatcher about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+DEBUG org.hibernate.engine.TwoPhaseLoad resolving associations for [kp.company.Employee#1]
+DEBUG org.hibernate.engine.TwoPhaseLoad done materializing entity [kp.company.Employee#1]
+DEBUG org.hibernate.engine.TwoPhaseLoad resolving associations for [kp.company.Employee#2]
+DEBUG org.hibernate.engine.TwoPhaseLoad done materializing entity [kp.company.Employee#2]
+DEBUG org.hibernate.engine.TwoPhaseLoad resolving associations for [kp.company.Employee#3]
+DEBUG org.hibernate.engine.TwoPhaseLoad done materializing entity [kp.company.Employee#3]
+DEBUG org.hibernate.engine.TwoPhaseLoad resolving associations for [kp.company.Employee#10]
+DEBUG org.hibernate.engine.TwoPhaseLoad done materializing entity [kp.company.Employee#10]
+DEBUG org.hibernate.engine.TwoPhaseLoad resolving associations for [kp.company.Employee#11]
+DEBUG org.hibernate.engine.TwoPhaseLoad done materializing entity [kp.company.Employee#11]
+DEBUG org.hibernate.engine.TwoPhaseLoad resolving associations for [kp.company.Employee#12]
+DEBUG org.hibernate.engine.TwoPhaseLoad done materializing entity [kp.company.Employee#12]
+DEBUG org.hibernate.engine.loading.CollectionLoadContext 1 collections were found in result set for role: kp.company.Department.employeesInternal
+DEBUG org.hibernate.engine.loading.CollectionLoadContext collection fully initialized: [kp.company.Department.employeesInternal#1]
+DEBUG org.hibernate.engine.loading.CollectionLoadContext 1 collections initialized for role: kp.company.Department.employeesInternal
+DEBUG org.hibernate.loader.Loader done loading collection
+DEBUG kp.company.hibernate.HibernateCompany findDepartments(): name[]
+DEBUG org.springframework.orm.hibernate3.HibernateTransactionManager Initiating transaction commit
+DEBUG org.springframework.orm.hibernate3.HibernateTransactionManager Committing Hibernate transaction on Session [org.hibernate.impl.SessionImpl@1dea382]
+DEBUG org.hibernate.transaction.JDBCTransaction commit
+DEBUG org.hibernate.transaction.JDBCTransaction re-enabling autocommit
+DEBUG org.hibernate.transaction.JDBCTransaction committed JDBC Connection
+DEBUG org.hibernate.jdbc.ConnectionManager transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+DEBUG org.springframework.orm.hibernate3.HibernateTransactionManager Closing Hibernate Session [org.hibernate.impl.SessionImpl@1dea382] after transaction
+DEBUG org.springframework.orm.hibernate3.SessionFactoryUtils Closing Hibernate Session
+DEBUG org.hibernate.jdbc.ConnectionManager releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+DEBUG org.hibernate.jdbc.ConnectionManager transaction completed on session with on_close connection release mode; be sure to close the session to release JDBC resources!
+INFO kp.company.web.FindDepartmentsForm processSubmit(): multiple departments found, name[], viewName[departments/list]

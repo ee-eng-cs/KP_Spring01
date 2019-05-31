@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <summary starttime="Tue Dec 12 19:04:54 CET 2017" duration="3586" name="test01-1" successful="yes">
+<topsteps notexecuted="0" failed="0" successful="2" total="2"/>
+<steps notexecuted="1" failed="0" successful="177" total="178"/>
+<timingprofile number="34" average="95">
+<range number="33" to="1" from="0"/>
+<range number="1" to="3" from="1"/>
+<range number="0" to="5" from="3"/>
+<range number="0" to="10" from="5"/>
+<range number="0" to="30" from="10"/>
+<range number="0" from="30"/>
+</timingprofile>
+</summary>

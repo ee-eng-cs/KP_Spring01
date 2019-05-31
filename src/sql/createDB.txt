@@ -1,0 +1,3 @@
+CREATE DATABASE kp_spring01;
+
+GRANT ALL PRIVILEGES ON kp_spring01.* TO kp@localhost IDENTIFIED BY 'mikimiki';
